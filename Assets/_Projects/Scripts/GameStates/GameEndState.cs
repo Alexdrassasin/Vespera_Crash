@@ -27,6 +27,19 @@ public class GameEndState : StateNode
             Debug.LogError($"GameEndState failed to get winner!", this);
             return;
         }
+
+        if(!InstanceHandler.TryGetInstance(out EndGameView endGameView))
+        {
+            Debug.LogError($"Failed to get end game view.",this);
+        }
+
+        if (!InstanceHandler.TryGetInstance(out GameViewManager gameViewManager))
+        {
+            Debug.LogError($"Failed to get game view manager.", this);
+        }
+
+        endGameView.SetWinner(winner);
+        gameViewManager.ShowView<EndGameView>();
         Debug.Log($"Game has now ended! {winner} is our champion!");
     }
 }

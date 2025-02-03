@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using PurrNet;
+using PurrNet.StateMachine;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -24,6 +25,8 @@ public class PlayerController : NetworkBehaviour
     [SerializeField] private CinemachineCamera playerCamera;
     [SerializeField] private NetworkAnimator animator;
     [SerializeField] private List<Renderer> renderers = new();
+    [SerializeField] private StateMachine stateMachine;
+    [SerializeField] private List<StateNode> weaponStates = new();
     
     private CharacterController characterController;
     private Vector3 velocity;
@@ -74,7 +77,7 @@ public class PlayerController : NetworkBehaviour
             Cursor.visible = false;
         }
 #endif
-
+        HandleWeaponSwitching();
         HandleMovement();
         HandleRotation();
     }
@@ -119,6 +122,19 @@ public class PlayerController : NetworkBehaviour
         playerCamera.transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
 
         transform.Rotate(Vector3.up * mouseX);
+    }
+
+    private void HandleWeaponSwitching()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            stateMachine.SetState(weaponStates[0]);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            stateMachine.SetState(weaponStates[1]);
+        }
     }
 
     private bool IsGrounded()

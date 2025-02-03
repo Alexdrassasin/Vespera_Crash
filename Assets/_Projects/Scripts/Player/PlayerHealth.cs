@@ -59,12 +59,21 @@ public class PlayerHealth : NetworkBehaviour
                 scoreManager.AddKill(info.sender);
                 if (owner.HasValue)
                 {
+                    UpdateDiePlayerHP(owner.Value);
                     scoreManager.AddDeath(owner.Value);
                 }
             }
 
-            OnDeath_Server?.Invoke(owner.Value);
+            OnDeath_Server?.Invoke(owner.Value);    
+            
             Destroy(gameObject);
+       
         }
+    }
+
+    [TargetRpc]
+    private void UpdateDiePlayerHP(PlayerID targetPlayer)
+    {
+        InstanceHandler.GetInstance<MainGameView>().UpdateHealth(0);
     }
 }

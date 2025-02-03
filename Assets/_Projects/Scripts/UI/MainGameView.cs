@@ -28,7 +28,10 @@ public class MainGameView : View
 
     public void UpdateHealth(int health)
     {
-        Debug.Log("update");
+        if(health< 0)
+        {
+            health = 0;
+        }
         healthText.text = health.ToString();
     }
 }
