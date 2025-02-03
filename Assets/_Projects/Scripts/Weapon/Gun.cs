@@ -1,10 +1,10 @@
-using NUnit.Framework;
 using PurrNet;
 using PurrNet.StateMachine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Gun : StateNode
 {
@@ -29,6 +29,10 @@ public class Gun : StateNode
     [SerializeField] private Transform rightIKTarget, leftIKTarget;
     [SerializeField] private List<Renderer> renderers = new();
     [SerializeField] private ParticleSystem environmentHitEffect, playerHitEffect;
+    [SerializeField] private SoundPlayer soundPlayerPrefab;
+    [SerializeField] private AudioSource shootSoundPlayer;
+    [SerializeField, Range(0f,1f)] private float environmentHitVolume, playerHitVolume, shootVolume;
+    [SerializeField] private List<AudioClip> environmentHitSounds, playerHitSounds, shootSounds;
 
 
     private float _lastFireTime;
@@ -80,6 +84,7 @@ public class Gun : StateNode
 
         if ((automatic && !Input.GetKey(KeyCode.Mouse0)) || (!automatic && !Input.GetKeyDown(KeyCode.Mouse0)))
         {
+            StopShooting();
             return;
         }
 
@@ -111,10 +116,18 @@ public class Gun : StateNode
     [ObserversRpc(runLocally: true)]
     private void PlayerHit(PlayerHealth player, Vector3 localposition, Vector3 normal)
     {
-        if (playerHitEffect && player && player.transform)
+        if (!player || !player.transform)
+        {
+            return;
+        }
+
+        if (playerHitEffect)
         {
             Instantiate(playerHitEffect, player.transform.TransformPoint(localposition), Quaternion.LookRotation(normal));
         }
+
+        var soundPlayer = Instantiate(soundPlayerPrefab, player.transform.TransformPoint(localposition), Quaternion.identity);
+        soundPlayer.PlaySound(playerHitSounds[Random.Range(0, playerHitSounds.Count)],playerHitVolume);
     }
 
     [ObserversRpc(runLocally:true)]
@@ -124,6 +137,9 @@ public class Gun : StateNode
         {
             Instantiate(environmentHitEffect, position, Quaternion.LookRotation(normal));
         }
+
+        var soundPlayer = Instantiate(soundPlayerPrefab, position, Quaternion.identity);
+        soundPlayer.PlaySound(environmentHitSounds[Random.Range(0, environmentHitSounds.Count)],environmentHitVolume);
     }
 
     private void SetIKTargets()
@@ -146,6 +162,50 @@ public class Gun : StateNode
         }
 
         _recoilCoroutine = StartCoroutine(PlayRecoil());
+
+        if (!automatic)
+        {
+            if (isOwner)
+            {
+                shootSoundPlayer.PlayOneShot(shootSounds[Random.Range(0, shootSounds.Count)], shootVolume / 3f);
+            }
+            else
+            {
+                shootSoundPlayer.PlayOneShot(shootSounds[Random.Range(0, shootSounds.Count)], shootVolume);
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                StartShooting();
+            }
+        }   
+    }
+
+    private bool isShooting = false;
+
+    [ObserversRpc(runLocally:true)]
+    void StartShooting()
+    {
+        if (!isShooting && shootSounds.Count > 0)
+        {
+            isShooting = true;
+            shootSoundPlayer.clip = shootSounds[Random.Range(0, shootSounds.Count)];
+            shootSoundPlayer.volume = shootVolume / 3f;
+            shootSoundPlayer.loop = true; // Enable looping for continuous fire
+            shootSoundPlayer.Play();
+        }
+    }
+
+    [ObserversRpc(runLocally: true)]
+    void StopShooting()
+    {
+        if (isShooting)
+        {
+            isShooting = false;
+            shootSoundPlayer.Stop();
+        }
     }
 
     private IEnumerator PlayRecoil()

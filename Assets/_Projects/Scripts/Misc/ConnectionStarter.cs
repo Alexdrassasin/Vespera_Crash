@@ -68,6 +68,7 @@ public class ConnectionStarter : MonoBehaviour
 
     private void StartNormal()
     {
+#if UNITY_EDITOR
         _networkManager.transport = _udpTransport;
 
         if (!ParrelSync.ClonesManager.IsClone())
@@ -75,6 +76,7 @@ public class ConnectionStarter : MonoBehaviour
             _networkManager.StartServer();
         }
         _networkManager.StartClient();
+#endif
     }
 
     private void StartFromLobby()
