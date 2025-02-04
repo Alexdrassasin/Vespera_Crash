@@ -571,9 +571,6 @@ MonoBehaviour:
   maxLookAngle: 80
   playerCamera: {fileID: 845506914700364003}
   animator: {fileID: 5719461211596460655}
-  renderers:
-  - {fileID: 3832509980187973347}
-  - {fileID: 3791428748539949793}
   stateMachine: {fileID: 1983543003468368597}
   weaponStates:
   - {fileID: 2211861297901461679}
@@ -976,13 +973,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7613212757347949731}
   - component: {fileID: 845506914700364003}
+  - component: {fileID: 7073432587116782398}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7613212757347949731
 Transform:
   m_ObjectHideFlags: 0
@@ -1011,7 +1009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority:
-    Enabled: 0
+    Enabled: 1
     m_Value: 0
   OutputChannel: 1
   StandbyUpdate: 2
@@ -1041,6 +1039,32 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &7073432587116782398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7025471997334768281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b548f511710492b4d9808e6c511c133f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isSetup: 0
+  _prefabId: -2147483648
+  _componentIndex: -2147483648
+  _shouldBePooled: 0
+  _parent: {fileID: 0}
+  _invertedPathToNearestParent: 
+  _directChildren: []
+  _networkRules: {fileID: 0}
+  _visitiblityRules: {fileID: 0}
+  playerCamera: {fileID: 845506914700364003}
+  cameraMimic: {fileID: 6552786621362100422}
+  renderers:
+  - {fileID: 3832509980187973347}
+  - {fileID: 3791428748539949793}
 --- !u!1 &7426768583176216770
 GameObject:
   m_ObjectHideFlags: 0
