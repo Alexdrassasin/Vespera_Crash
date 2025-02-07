@@ -1,3 +1,5 @@
+using PurrNet;
+using System.Collections;
 using UnityEngine;
 
 public class SoundPlayer : MonoBehaviour
@@ -10,6 +12,12 @@ public class SoundPlayer : MonoBehaviour
         audioSource.volume = volume;
         audioSource.Play();
         Destroy(gameObject, clip.length + 0.1f);
+        //StartCoroutine(ReturnToPoolAfter(clip.length + 0.1f)); // Use pool instead of Destroy()
     }
     
+    private IEnumerator ReturnToPoolAfter(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        InstanceHandler.GetInstance<ObjectPoolManager>().ReturnToPool_SoundPlayer(this); 
+    }
 }

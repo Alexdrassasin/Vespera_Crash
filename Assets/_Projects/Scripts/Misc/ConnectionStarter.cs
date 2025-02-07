@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class ConnectionStarter : MonoBehaviour
 {
+    [SerializeField] private CanvasGroup BlackOverlay;
     [SerializeField] private bool useSteamTransport;
     private SteamTransport _steamTransport;
     private PurrTransport _purrTransport;
@@ -38,6 +39,11 @@ public class ConnectionStarter : MonoBehaviour
 
     private void Start()
     {
+        if (!BlackOverlay)
+        {
+            return;
+        }
+
         if (!_networkManager)
         {
             PurrLogger.LogError($"Failed to start connection. {nameof(NetworkManager)} is null!", this);
@@ -64,6 +70,9 @@ public class ConnectionStarter : MonoBehaviour
         {
             StartNormal();
         }
+
+        BlackOverlay.alpha = 1;
+        StartCoroutine(FadeOut(BlackOverlay, 0.5f));
     }
 
     private void StartNormal()
@@ -132,5 +141,17 @@ public class ConnectionStarter : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         _networkManager.StartClient();
+    }
+
+    private IEnumerator FadeOut(CanvasGroup fadeCanvas, float fadeDuration)
+    {
+        float timer = 0f;
+        while (timer < fadeDuration)
+        {
+            timer += Time.deltaTime;
+            fadeCanvas.alpha = Mathf.Lerp(1, 0, timer / fadeDuration);
+            yield return null;
+        }
+        fadeCanvas.alpha = 0; // Ensure fully black
     }
 }

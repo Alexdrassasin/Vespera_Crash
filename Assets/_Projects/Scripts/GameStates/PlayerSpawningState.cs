@@ -1,3 +1,4 @@
+using PurrNet;
 using PurrNet.StateMachine;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,26 +26,45 @@ public class PlayerSpawningState : StateNode
         machine.Next(spawnedPlayers);
     }
 
+   
+
     private List<PlayerHealth> SpawnPlayers()
     {
         var spawnedPlayers = new List<PlayerHealth>();
 
+        // Shuffle the spawn points to randomize the spawning sequence
+        Shuffle(spawnPoints);
+
         int currentSpawnIndex = 0;
         foreach (var player in networkManager.players)
         {
+            if (currentSpawnIndex >= spawnPoints.Count)
+            {
+                Debug.LogWarning("Not enough spawn points for all players!");
+                break;
+            }
+
             var spawnPoint = spawnPoints[currentSpawnIndex];
             var newPlayer = Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
             newPlayer.GiveOwnership(player);
             spawnedPlayers.Add(newPlayer);
             currentSpawnIndex++;
-
-            if (currentSpawnIndex >= spawnPoints.Count)
-            {
-                currentSpawnIndex = 0;
-            }
         }
 
         return spawnedPlayers;
+    }
+
+    // Fisher-Yates shuffle algorithm to randomize the spawn points
+    private void Shuffle<T>(List<T> list)
+    {
+        int n = list.Count;
+        for (int i = 0; i < n - 1; i++)
+        {
+            int r = Random.Range(i, n);
+            T value = list[r];
+            list[r] = list[i];
+            list[i] = value;
+        }
     }
 
     private void DespawnPlayers()

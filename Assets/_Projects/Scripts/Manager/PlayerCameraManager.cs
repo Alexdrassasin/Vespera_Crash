@@ -36,7 +36,6 @@ public class PlayerCameraManager : NetworkBehaviour
 
     public void UnregisterCamera(PlayerCamera cam)
     {
-        Debug.Log("Unregister Cam");
         if (_allPlayerCameras.Contains(cam))
         {
             _allPlayerCameras.Remove(cam);
@@ -45,6 +44,7 @@ public class PlayerCameraManager : NetworkBehaviour
         if (cam.isOwner)
         {
             _canSwitchCamera = true;
+            InstanceHandler.GetInstance<MainGameView>().toggleSpectatingPlayerName(true);
             switchNext();
         }
     }
@@ -74,13 +74,20 @@ public class PlayerCameraManager : NetworkBehaviour
             return;
         }
 
+        _allPlayerCameras[_currentCameraIndex].parent.GetComponent<PlayerHealth>().isSpectatingThisPlayer = false;
         _allPlayerCameras[_currentCameraIndex].ToggleCamera(false);
+
         _currentCameraIndex++;
+
         if(_currentCameraIndex >= _allPlayerCameras.Count)
         {
             _currentCameraIndex = 0;
         }
+
+        _allPlayerCameras[_currentCameraIndex].parent.GetComponent<PlayerHealth>().isSpectatingThisPlayer = true;
+        _allPlayerCameras[_currentCameraIndex].parent.GetComponent<PlayerHealth>().UpdateSpecatorUI();
         _allPlayerCameras[_currentCameraIndex].ToggleCamera(true);
+        InstanceHandler.GetInstance<MainGameView>().UpdateSpectatingPlayerName(_allPlayerCameras[_currentCameraIndex].owner.Value.ToString());
     }
 
     private void switchPrevious()
@@ -90,12 +97,19 @@ public class PlayerCameraManager : NetworkBehaviour
             return;
         }
 
+        _allPlayerCameras[_currentCameraIndex].parent.GetComponent<PlayerHealth>().isSpectatingThisPlayer = false;
         _allPlayerCameras[_currentCameraIndex].ToggleCamera(false);
+
         _currentCameraIndex--;
+
         if (_currentCameraIndex < 0)
         {
             _currentCameraIndex = _allPlayerCameras.Count - 1;
         }
+
+        _allPlayerCameras[_currentCameraIndex].parent.GetComponent<PlayerHealth>().isSpectatingThisPlayer = true;
+        _allPlayerCameras[_currentCameraIndex].parent.GetComponent<PlayerHealth>().UpdateSpecatorUI();
         _allPlayerCameras[_currentCameraIndex].ToggleCamera(true);
+        InstanceHandler.GetInstance<MainGameView>().UpdateSpectatingPlayerName(_allPlayerCameras[_currentCameraIndex].owner.Value.ToString());
     }
 }

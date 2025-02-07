@@ -8,11 +8,21 @@ using UnityEngine;
 public class RoundRunningState :  StateNode<List<PlayerHealth>>
 {
     private List<PlayerID> _players = new();
+
+    [ObserversRpc]
+    private void InitializeUI()
+    {
+        Debug.Log("UI Initialization Done");
+        InstanceHandler.GetInstance<MainGameView>().toggleSpectatingPlayerName(false);
+    }
+
     public override void Enter(List<PlayerHealth> data, bool asServer)
     {
         base.Enter(data, asServer);
 
-        if(!asServer)
+        InitializeUI();
+
+        if (!asServer)
         {
             return;
         }

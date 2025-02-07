@@ -19,8 +19,7 @@ public class PlayerCamera : NetworkBehaviour
     }
 
     protected override void OnDespawned()
-    {
-        Debug.Log("hello");
+    {        
         base.OnDespawned();
 
         InstanceHandler.GetInstance<PlayerCameraManager>().UnregisterCamera(this);      
@@ -28,7 +27,6 @@ public class PlayerCamera : NetworkBehaviour
 
     protected override void OnDespawned(bool asServer)
     {
-        Debug.Log("hello server");
         base.OnDespawned(asServer);
         InstanceHandler.GetInstance<PlayerCameraManager>().UnregisterCamera(this);
     }

@@ -28,13 +28,13 @@ public class Gun : StateNode
     [SerializeField] private Transform rightHandTarget, leftHandTarget;
     [SerializeField] private Transform rightIKTarget, leftIKTarget;
     [SerializeField] private List<Renderer> renderers = new();
-    [SerializeField] private ParticleSystem environmentHitEffect, playerHitEffect;
-    [SerializeField] private SoundPlayer soundPlayerPrefab;
+    //[SerializeField] private ParticleSystem environmentHitEffect, playerHitEffect;
+    //[SerializeField] private SoundPlayer soundPlayerPrefab;
     [SerializeField] private AudioSource shootSoundPlayer;
-    [SerializeField, Range(0f,1f)] private float environmentHitVolume, playerHitVolume, shootVolume;
+    [SerializeField, Range(0f, 1f)] private float environmentHitVolume, playerHitVolume, shootVolume;
     [SerializeField] private List<AudioClip> environmentHitSounds, playerHitSounds, shootSounds;
 
-
+    private ObjectPoolManager _objectPoolManager;
     private float _lastFireTime;
     private Vector3 _originalPosition;
     private Quaternion _originalRotation;
@@ -61,6 +61,7 @@ public class Gun : StateNode
     {
         _originalPosition = transform.localPosition;
         _originalRotation = transform.localRotation;
+        _objectPoolManager = InstanceHandler.GetInstance<ObjectPoolManager>();
     }
 
     private void ToggleVisuals(bool toggle)
@@ -111,6 +112,7 @@ public class Gun : StateNode
         PlayerHit(playerHealth, playerHealth.transform.InverseTransformPoint(hit.point), hit.normal);
 
         playerHealth.ChangeHealth(-damage);
+
     }
 
     [ObserversRpc(runLocally: true)]
@@ -121,25 +123,71 @@ public class Gun : StateNode
             return;
         }
 
-        if (playerHitEffect)
+        if (!_objectPoolManager.environmentHitEffect)
         {
-            Instantiate(playerHitEffect, player.transform.TransformPoint(localposition), Quaternion.LookRotation(normal));
+            return;
+        }
+        var impactEffect = _objectPoolManager.GetPlayerImpactEffect();
+        impactEffect.transform.position = player.transform.TransformPoint(localposition);
+        impactEffect.transform.rotation = Quaternion.LookRotation(normal);
+        impactEffect.Play();
+
+        _objectPoolManager.ReturnToPoolAfter<ParticleSystem>(impactEffect, impactEffect.main.duration, _objectPoolManager.playerImpactEffect_pool);
+        //Instantiate(playerHitEffect, player.transform.TransformPoint(localposition), Quaternion.LookRotation(normal));
+
+        if (!_objectPoolManager.soundPlayerPrefab)
+        {
+            return;
         }
 
-        var soundPlayer = Instantiate(soundPlayerPrefab, player.transform.TransformPoint(localposition), Quaternion.identity);
-        soundPlayer.PlaySound(playerHitSounds[Random.Range(0, playerHitSounds.Count)],playerHitVolume);
+        var soundPlayer = _objectPoolManager.GetSoundPlayer();
+        soundPlayer.transform.position = player.transform.TransformPoint(localposition);
+        soundPlayer.PlaySound(playerHitSounds[Random.Range(0, playerHitSounds.Count)], playerHitVolume);
+        /*var soundPlayer = Instantiate(soundPlayerPrefab, player.transform.TransformPoint(localposition), Quaternion.identity);
+        soundPlayer.PlaySound(playerHitSounds[Random.Range(0, playerHitSounds.Count)],playerHitVolume);*/
     }
 
-    [ObserversRpc(runLocally:true)]
+    [ObserversRpc(runLocally: true)]
     private void EnvironmentHit(Vector3 position, Vector3 normal)
     {
-        if (environmentHitEffect)
+        if (!_objectPoolManager.environmentHitEffect)
         {
-            Instantiate(environmentHitEffect, position, Quaternion.LookRotation(normal));
+            return;
         }
 
-        var soundPlayer = Instantiate(soundPlayerPrefab, position, Quaternion.identity);
-        soundPlayer.PlaySound(environmentHitSounds[Random.Range(0, environmentHitSounds.Count)],environmentHitVolume);
+      
+        var impactEffect = _objectPoolManager.GetEnvironmentImpactEffect();
+        impactEffect.transform.position = position;
+        impactEffect.transform.rotation = Quaternion.LookRotation(normal);
+        impactEffect.Play();
+
+        _objectPoolManager.ReturnToPoolAfter<ParticleSystem>(impactEffect, impactEffect.main.duration, _objectPoolManager.environmentImpactEffect_pool);
+        //Instantiate(environmentHitEffect, position, Quaternion.LookRotation(normal));
+        if (Physics.Raycast(position - normal * 0.1f, normal, out RaycastHit hit, 0.2f))
+        {
+            if (hit.rigidbody != null)
+            {
+                ApplyImpactForce(hit.rigidbody, position, normal);
+            }
+        }
+
+        if (!_objectPoolManager.soundPlayerPrefab)
+        {
+            return;
+        }
+        var soundPlayer = _objectPoolManager.GetSoundPlayer();
+        soundPlayer.transform.position = position;
+        soundPlayer.PlaySound(environmentHitSounds[Random.Range(0, environmentHitSounds.Count)], environmentHitVolume);
+
+        /*var soundPlayer = Instantiate(_objectPoolManager.soundPlayerPrefab, position, Quaternion.identity);
+         soundPlayer.PlaySound(environmentHitSounds[Random.Range(0, environmentHitSounds.Count)],environmentHitVolume);*/
+    }
+    private void ApplyImpactForce(Rigidbody rb, Vector3 hitPoint, Vector3 hitNormal)
+    {
+        float forceAmount = 500f * damage; // Adjust force power as needed
+        float impactRadius = 1f; // Radius of the force effect
+
+        rb.AddExplosionForce(forceAmount, hitPoint, impactRadius);
     }
 
     private void SetIKTargets()

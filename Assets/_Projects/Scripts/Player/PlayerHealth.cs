@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerHealth : NetworkBehaviour
 {
-    [SerializeField] SyncVar<int> health = new (100);
+    [SerializeField] private int maxHealth = 100;
+    [SerializeField] SyncVar<int> health = new (0);
     [SerializeField] private int selfLayer, otherLayer;
 
     [SerializeField] private ParticleSystem deathParticles;
@@ -14,6 +15,7 @@ public class PlayerHealth : NetworkBehaviour
 
     public Action<PlayerID> OnDeath_Server;
     public int Health => health;
+    public bool isSpectatingThisPlayer;
 
     protected override void OnSpawned()
     {
@@ -23,12 +25,18 @@ public class PlayerHealth : NetworkBehaviour
         SetLayerRecursive(gameObject, actualLayer);
 
         if(isOwner)
-        {
-            InstanceHandler.GetInstance<MainGameView>().UpdateHealth(health.value);
+        {         
             health.onChanged += OnHealthChanged;
+            ChangeHealth(maxHealth);
+            InstanceHandler.GetInstance<MainGameView>().UpdateHealth(health.value, maxHealth);
+            InstanceHandler.GetInstance<MainGameView>().UpdateHealthBarInstant(health.value, maxHealth);
+        }
+        else
+        {
+            health.onChanged += OnHealthChanged_NotPlayer;
         }
     }
-
+    
     protected override void OnDestroy()
     {
         base.OnDestroy();
@@ -39,7 +47,18 @@ public class PlayerHealth : NetworkBehaviour
 
     private void OnHealthChanged(int newHealth)
     {
-        InstanceHandler.GetInstance<MainGameView>().UpdateHealth(newHealth);
+        InstanceHandler.GetInstance<MainGameView>().UpdateHealth(newHealth,maxHealth);
+        InstanceHandler.GetInstance<MainGameView>().UpdateHealthBarSmooth(newHealth, maxHealth);
+    }
+
+    private void OnHealthChanged_NotPlayer(int newHealth)
+    {
+        if(!isSpectatingThisPlayer)
+        {
+            return;
+        }
+        InstanceHandler.GetInstance<MainGameView>().UpdateHealth(newHealth, maxHealth);
+        InstanceHandler.GetInstance<MainGameView>().UpdateHealthBarSmooth(newHealth, maxHealth);
     }
 
     private void SetLayerRecursive(GameObject obj, int layer) 
@@ -56,8 +75,9 @@ public class PlayerHealth : NetworkBehaviour
     public void ChangeHealth(int amount, RPCInfo info = default)
     {
         health.value += amount;
+        health.value = Mathf.Clamp(health.value, 0, maxHealth);
 
-        if(health <= 0)
+        if (health <= 0)
         {
             if(InstanceHandler.TryGetInstance(out ScoreManager scoreManager))
             {
@@ -89,6 +109,13 @@ public class PlayerHealth : NetworkBehaviour
     [TargetRpc]
     private void UpdateDiePlayerHP(PlayerID targetPlayer)
     {
-        InstanceHandler.GetInstance<MainGameView>().UpdateHealth(0);
+        InstanceHandler.GetInstance<MainGameView>().UpdateHealth(0, maxHealth);
+        InstanceHandler.GetInstance<MainGameView>().UpdateHealthBarSmooth(0, maxHealth);
+    }
+
+    public void UpdateSpecatorUI()
+    {
+        InstanceHandler.GetInstance<MainGameView>().UpdateHealth(health.value, maxHealth);
+        InstanceHandler.GetInstance<MainGameView>().UpdateHealthBarInstant(health.value, maxHealth);
     }
 }

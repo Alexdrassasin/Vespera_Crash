@@ -531,8 +531,9 @@ MonoBehaviour:
   _directChildren: []
   _networkRules: {fileID: 0}
   _visitiblityRules: {fileID: 0}
+  maxHealth: 200
   health:
-    _value: 100
+    _value: 0
     _ownerAuth: 0
     _sendIntervalInSeconds: 0
   selfLayer: 6
