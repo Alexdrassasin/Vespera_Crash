@@ -15,22 +15,28 @@ public class GameEndState : StateNode
             return;
         }
 
-        if(!InstanceHandler.TryGetInstance(out ScoreManager scoreManager))
+        ShowWinnerOnEveryone();
+    }
+
+    [ObserversRpc(runLocally:true)]
+    public void ShowWinnerOnEveryone()
+    {
+        if (!InstanceHandler.TryGetInstance(out ScoreManager scoreManager))
         {
             Debug.LogError($"GameEndState failed to get scoremanager!", this);
             return;
         }
 
         var winner = scoreManager.GetWinner();
-        if(winner == default)
+        if (winner == default)
         {
             Debug.LogError($"GameEndState failed to get winner!", this);
             return;
         }
 
-        if(!InstanceHandler.TryGetInstance(out EndGameView endGameView))
+        if (!InstanceHandler.TryGetInstance(out EndGameView endGameView))
         {
-            Debug.LogError($"Failed to get end game view.",this);
+            Debug.LogError($"Failed to get end game view.", this);
         }
 
         if (!InstanceHandler.TryGetInstance(out GameViewManager gameViewManager))
@@ -38,8 +44,8 @@ public class GameEndState : StateNode
             Debug.LogError($"Failed to get game view manager.", this);
         }
 
+        Debug.Log($"Game has now ended! {winner} is our champion!");
         endGameView.SetWinner(winner);
         gameViewManager.ShowView<EndGameView>();
-        Debug.Log($"Game has now ended! {winner} is our champion!");
     }
 }

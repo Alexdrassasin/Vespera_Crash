@@ -12,6 +12,8 @@ public class ObjectPoolManager : NetworkBehaviour
     public Queue<ParticleSystem> environmentImpactEffect_pool = new Queue<ParticleSystem>();
     public Queue<ParticleSystem> playerImpactEffect_pool = new Queue<ParticleSystem>();
 
+    public List<Fracture> destructibleObjects = new List<Fracture>();
+
     [SerializeField] private Transform ImpactSoundPlayerCollector, EnvironementImpactEffectCollector, PlayerImpactEffectCollector;
 
     private void Awake()
@@ -22,6 +24,26 @@ public class ObjectPoolManager : NetworkBehaviour
     private void OnDestroy()
     {
         InstanceHandler.UnregisterInstance<ObjectPoolManager>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ResetFracture();
+        }
+    }
+
+    public void ResetFracture()
+    {
+        foreach(var obj in destructibleObjects)
+        {
+            if (obj.fragmentRoot)
+            {
+                Destroy(obj.fragmentRoot);
+            }
+            obj.gameObject.SetActive(true);
+        }
     }
 
     #region ImpactEffect
