@@ -7,6 +7,7 @@ TagManager:
   - Projectile
   - Floor
   - Bullet
+  - BulletHole
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - SelfLayer
   - OtherLayer
   - BulletLayer
-  - 
+  - Floor
   - 
   - 
   - 

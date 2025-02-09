@@ -260,8 +260,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -1104,6 +1116,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -1249818184330559225, guid: 296b6c6ad62626c48aef7fa6c5e2a9a8, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1249818184330559225, guid: 296b6c6ad62626c48aef7fa6c5e2a9a8, type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -1156,8 +1172,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 382781f3eb846ba4992cfb4e635c76ed, type: 2}
     - target: {fileID: 8005840122893382774, guid: 296b6c6ad62626c48aef7fa6c5e2a9a8, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005840122893382774, guid: 296b6c6ad62626c48aef7fa6c5e2a9a8, type: 3}
       propertyPath: fractureOptions.fragmentCount
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005840122893382774, guid: 296b6c6ad62626c48aef7fa6c5e2a9a8, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1693,6 +1717,18 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -1832,8 +1868,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -1949,6 +1997,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 2d9674097da42b2448220c5e2805bb27, type: 2}
+    - target: {fileID: 4158558131214592239, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4158558131214592239, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013457299127188187, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8013457299127188187, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -2015,6 +2075,26 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: c6a5181c39f2ce4408030b9c2d1b47e2, type: 2}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: refractureOptions.maxRefractureCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -2143,6 +2223,26 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 382781f3eb846ba4992cfb4e635c76ed, type: 2}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: refractureOptions.maxRefractureCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -2200,6 +2300,18 @@ PrefabInstance:
     - target: {fileID: 4812002822647660, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_IsKinematic
@@ -2356,8 +2468,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -3610,6 +3734,22 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: c6a5181c39f2ce4408030b9c2d1b47e2, type: 2}
+    - target: {fileID: 3584973533656276819, guid: c65338a0f30f41c4681e41312190273d, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584973533656276819, guid: c65338a0f30f41c4681e41312190273d, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627384862648715074, guid: c65338a0f30f41c4681e41312190273d, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627384862648715074, guid: c65338a0f30f41c4681e41312190273d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3763,6 +3903,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
+    - target: {fileID: -4446935978850777928, guid: dc7c84106cc461e4f8dac748879dbe72, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4446935978850777928, guid: dc7c84106cc461e4f8dac748879dbe72, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
     - target: {fileID: 1070387196533242, guid: dc7c84106cc461e4f8dac748879dbe72, type: 3}
       propertyPath: m_Name
       value: SM_PolygonPrototype_Buildings_WallDoor_2x3_01P
@@ -3808,6 +3956,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6744366204581791439, guid: dc7c84106cc461e4f8dac748879dbe72, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744366204581791439, guid: dc7c84106cc461e4f8dac748879dbe72, type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -3829,6 +3981,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
+    - target: {fileID: -7946919003559949623, guid: 6d34f074083a0dc4d9798f703bad35de, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7946919003559949623, guid: 6d34f074083a0dc4d9798f703bad35de, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7946919003559949623, guid: 6d34f074083a0dc4d9798f703bad35de, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
     - target: {fileID: 4135569096795916, guid: 6d34f074083a0dc4d9798f703bad35de, type: 3}
       propertyPath: m_RootOrder
       value: 196
@@ -3870,6 +4034,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: c6a5181c39f2ce4408030b9c2d1b47e2, type: 2}
     - target: {fileID: 6224510247573377445, guid: 6d34f074083a0dc4d9798f703bad35de, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6224510247573377445, guid: 6d34f074083a0dc4d9798f703bad35de, type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -3892,8 +4060,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -4186,6 +4366,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 382781f3eb846ba4992cfb4e635c76ed, type: 2}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -4243,6 +4435,26 @@ PrefabInstance:
     - target: {fileID: 4035765028099436, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: refractureOptions.maxRefractureCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_IsKinematic
@@ -4745,6 +4957,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 382781f3eb846ba4992cfb4e635c76ed, type: 2}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -5733,6 +5957,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
+    - target: {fileID: -1236503051499750547, guid: bc89cff11dc72544faaaa69b501fd596, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1236503051499750547, guid: bc89cff11dc72544faaaa69b501fd596, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
     - target: {fileID: 1965410809269166, guid: bc89cff11dc72544faaaa69b501fd596, type: 3}
       propertyPath: m_Name
       value: SM_Bean_Female_01 (1)
@@ -5776,6 +6008,14 @@ PrefabInstance:
     - target: {fileID: 4932140778729472, guid: bc89cff11dc72544faaaa69b501fd596, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674177673408643067, guid: bc89cff11dc72544faaaa69b501fd596, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674177673408643067, guid: bc89cff11dc72544faaaa69b501fd596, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6496,8 +6736,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 382781f3eb846ba4992cfb4e635c76ed, type: 2}
     - target: {fileID: 511686251984634939, guid: 0a38eb871bfa7c646bc59c4f2eeea64b, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 511686251984634939, guid: 0a38eb871bfa7c646bc59c4f2eeea64b, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999696402868582330, guid: 0a38eb871bfa7c646bc59c4f2eeea64b, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999696402868582330, guid: 0a38eb871bfa7c646bc59c4f2eeea64b, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 7675231188242076326, guid: 0a38eb871bfa7c646bc59c4f2eeea64b, type: 3}
       propertyPath: m_Size.x
@@ -8378,6 +8630,18 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -8514,6 +8778,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 382781f3eb846ba4992cfb4e635c76ed, type: 2}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -8588,6 +8864,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 382781f3eb846ba4992cfb4e635c76ed, type: 2}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -8874,6 +9162,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
+    - target: {fileID: -4446935978850777928, guid: dc7c84106cc461e4f8dac748879dbe72, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4446935978850777928, guid: dc7c84106cc461e4f8dac748879dbe72, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
     - target: {fileID: 1070387196533242, guid: dc7c84106cc461e4f8dac748879dbe72, type: 3}
       propertyPath: m_Name
       value: SM_PolygonPrototype_Buildings_WallDoor_2x3_01P (1)
@@ -8926,6 +9222,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 382781f3eb846ba4992cfb4e635c76ed, type: 2}
+    - target: {fileID: 6744366204581791439, guid: dc7c84106cc461e4f8dac748879dbe72, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6744366204581791439, guid: dc7c84106cc461e4f8dac748879dbe72, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -9076,6 +9376,18 @@ PrefabInstance:
     - target: {fileID: 4812002822647660, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_IsKinematic
@@ -9267,6 +9579,18 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -9290,8 +9614,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -10462,6 +10798,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: refractureOptions.maxRefractureCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -10836,6 +11192,26 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: c6a5181c39f2ce4408030b9c2d1b47e2, type: 2}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: refractureOptions.maxRefractureCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -11165,8 +11541,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -11234,8 +11622,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -11407,6 +11807,18 @@ PrefabInstance:
     - target: {fileID: 4812002822647660, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_IsKinematic
@@ -12146,6 +12558,18 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -12272,6 +12696,26 @@ PrefabInstance:
     - target: {fileID: 4035765028099436, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: refractureOptions.maxRefractureCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_IsKinematic
@@ -12668,8 +13112,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 4914818815454766, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_RootOrder
@@ -12996,6 +13452,26 @@ PrefabInstance:
     - target: {fileID: 4035765028099436, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: refractureOptions.maxRefractureCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_IsKinematic
@@ -13351,6 +13827,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 2d9674097da42b2448220c5e2805bb27, type: 2}
+    - target: {fileID: 4158558131214592239, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4158558131214592239, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013457299127188187, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8013457299127188187, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -13560,8 +14048,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -14463,9 +14963,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3584973533656276819, guid: c65338a0f30f41c4681e41312190273d, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584973533656276819, guid: c65338a0f30f41c4681e41312190273d, type: 3}
       propertyPath: fractureOptions.insideMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 3afa80fcc6ca73c43985c14a1b6768e9, type: 2}
+    - target: {fileID: 3584973533656276819, guid: c65338a0f30f41c4681e41312190273d, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627384862648715074, guid: c65338a0f30f41c4681e41312190273d, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627384862648715074, guid: c65338a0f30f41c4681e41312190273d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14565,6 +15081,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
       value: SM_PolygonPrototype_Icon_Coin_01 (12)
@@ -14869,6 +15401,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 382781f3eb846ba4992cfb4e635c76ed, type: 2}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -15856,8 +16400,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -16652,6 +17208,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
+    - target: {fileID: -7946919003559949623, guid: 6d34f074083a0dc4d9798f703bad35de, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7946919003559949623, guid: 6d34f074083a0dc4d9798f703bad35de, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7946919003559949623, guid: 6d34f074083a0dc4d9798f703bad35de, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
     - target: {fileID: 1815345801761848, guid: 6d34f074083a0dc4d9798f703bad35de, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Door_01 (1)
@@ -17182,6 +17750,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: refractureOptions.maxRefractureCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -17437,6 +18025,22 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 2d9674097da42b2448220c5e2805bb27, type: 2}
+    - target: {fileID: 3584973533656276819, guid: c65338a0f30f41c4681e41312190273d, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584973533656276819, guid: c65338a0f30f41c4681e41312190273d, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627384862648715074, guid: c65338a0f30f41c4681e41312190273d, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627384862648715074, guid: c65338a0f30f41c4681e41312190273d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17924,6 +18528,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 382781f3eb846ba4992cfb4e635c76ed, type: 2}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -17947,8 +18563,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -18229,6 +18857,26 @@ PrefabInstance:
     - target: {fileID: 4035765028099436, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: refractureOptions.maxRefractureCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_IsKinematic
@@ -19178,6 +19826,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: refractureOptions.maxRefractureCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -19383,6 +20051,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4158558131214592239, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4158558131214592239, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013457299127188187, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8013457299127188187, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -19437,6 +20117,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: refractureOptions.maxRefractureCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -19459,6 +20159,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
+    - target: {fileID: -4446935978850777928, guid: dc7c84106cc461e4f8dac748879dbe72, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4446935978850777928, guid: dc7c84106cc461e4f8dac748879dbe72, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
     - target: {fileID: 1070387196533242, guid: dc7c84106cc461e4f8dac748879dbe72, type: 3}
       propertyPath: m_Name
       value: SM_PolygonPrototype_Buildings_WallDoor_2x3_01P (2)
@@ -19499,6 +20207,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: dd41db2cdb4e66e4985303e1287ab101, type: 2}
+    - target: {fileID: 6744366204581791439, guid: dc7c84106cc461e4f8dac748879dbe72, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6744366204581791439, guid: dc7c84106cc461e4f8dac748879dbe72, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -19731,8 +20443,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -19813,6 +20537,7 @@ Transform:
   - {fileID: 1446682732}
   - {fileID: 637236298}
   - {fileID: 1054229203}
+  - {fileID: 1992101934}
   m_Father: {fileID: 333866883}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1450417472
@@ -19837,8 +20562,9 @@ MonoBehaviour:
   _networkRules: {fileID: 0}
   _visitiblityRules: {fileID: 0}
   soundPlayerPrefab: {fileID: 5543452219173333447, guid: 3ef500d40810a594dadf242848a595b0, type: 3}
-  environmentHitEffect: {fileID: 5370287287859415609, guid: 58b773c0866a1974eb90acec5a3ffe02, type: 3}
-  playerHitEffect: {fileID: 7615540344240206380, guid: 36b99be4ac8b9a04d9a0df051df86700, type: 3}
+  environmentHitEffectPrefab: {fileID: 5370287287859415609, guid: 58b773c0866a1974eb90acec5a3ffe02, type: 3}
+  playerHitEffectPrefab: {fileID: 7615540344240206380, guid: 36b99be4ac8b9a04d9a0df051df86700, type: 3}
+  bulletHolePrefab: {fileID: 153415217838828575, guid: 35e973229931f954f990dd315a2f9066, type: 3}
   destructibleObjects:
   - {fileID: 1670115826}
   - {fileID: 1897792750}
@@ -19907,9 +20633,11 @@ MonoBehaviour:
   - {fileID: 1867362258}
   - {fileID: 1171590476}
   - {fileID: 1698999174}
+  bulletHoleLifeTime: 5
   ImpactSoundPlayerCollector: {fileID: 1446682732}
   EnvironementImpactEffectCollector: {fileID: 637236298}
   PlayerImpactEffectCollector: {fileID: 1054229203}
+  BulletHoleCollector: {fileID: 1992101934}
 --- !u!1001 &1459272841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20039,8 +20767,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -20556,8 +21296,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -20973,6 +21725,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
+    - target: {fileID: -8340004913477874796, guid: f10c394033f254647873f3d28a75a062, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8340004913477874796, guid: f10c394033f254647873f3d28a75a062, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3825714923278422392, guid: f10c394033f254647873f3d28a75a062, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3825714923278422392, guid: f10c394033f254647873f3d28a75a062, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
     - target: {fileID: 1283017171755564, guid: f10c394033f254647873f3d28a75a062, type: 3}
       propertyPath: m_Name
       value: SM_Bean_Cop_01 (1)
@@ -21474,6 +22242,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 382781f3eb846ba4992cfb4e635c76ed, type: 2}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -22113,6 +22893,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
+    - target: {fileID: -1010327700809882096, guid: e332982425ee2ec48b168979bb7b43f5, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1010327700809882096, guid: e332982425ee2ec48b168979bb7b43f5, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4283527512771772, guid: e332982425ee2ec48b168979bb7b43f5, type: 3}
       propertyPath: m_RootOrder
       value: 188
@@ -22144,6 +22932,14 @@ PrefabInstance:
     - target: {fileID: 4283527512771772, guid: e332982425ee2ec48b168979bb7b43f5, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 930047230304930718, guid: e332982425ee2ec48b168979bb7b43f5, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 930047230304930718, guid: e332982425ee2ec48b168979bb7b43f5, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22457,8 +23253,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -23139,6 +23947,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
+    - target: {fileID: -1236503051499750547, guid: bc89cff11dc72544faaaa69b501fd596, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1236503051499750547, guid: bc89cff11dc72544faaaa69b501fd596, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
     - target: {fileID: 4932140778729472, guid: bc89cff11dc72544faaaa69b501fd596, type: 3}
       propertyPath: m_RootOrder
       value: 176
@@ -23170,6 +23986,14 @@ PrefabInstance:
     - target: {fileID: 4932140778729472, guid: bc89cff11dc72544faaaa69b501fd596, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674177673408643067, guid: bc89cff11dc72544faaaa69b501fd596, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674177673408643067, guid: bc89cff11dc72544faaaa69b501fd596, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23850,6 +24674,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 2d9674097da42b2448220c5e2805bb27, type: 2}
+    - target: {fileID: 4158558131214592239, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4158558131214592239, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013457299127188187, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8013457299127188187, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -23884,8 +24720,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -25129,6 +25977,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 2d9674097da42b2448220c5e2805bb27, type: 2}
+    - target: {fileID: 4158558131214592239, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4158558131214592239, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013457299127188187, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8013457299127188187, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -25404,6 +26264,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: refractureOptions.maxRefractureCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -25506,6 +26386,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
+    - target: {fileID: -269231443340518640, guid: 9b88eb630e9e15a4f950eae741685374, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -269231443340518640, guid: 9b88eb630e9e15a4f950eae741685374, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1645872946987862, guid: 9b88eb630e9e15a4f950eae741685374, type: 3}
       propertyPath: m_Name
       value: SM_Bean_Town_Female_01 (1)
@@ -25549,6 +26437,14 @@ PrefabInstance:
     - target: {fileID: 4182031405557140, guid: 9b88eb630e9e15a4f950eae741685374, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099820142787765843, guid: 9b88eb630e9e15a4f950eae741685374, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099820142787765843, guid: 9b88eb630e9e15a4f950eae741685374, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26528,6 +27424,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: refractureOptions.maxRefractureCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -26747,6 +27663,26 @@ PrefabInstance:
     - target: {fileID: 4035765028099436, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: refractureOptions.maxRefractureCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_IsKinematic
@@ -26994,6 +27930,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
+    - target: {fileID: -1010327700809882096, guid: e332982425ee2ec48b168979bb7b43f5, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1010327700809882096, guid: e332982425ee2ec48b168979bb7b43f5, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1849736199912346, guid: e332982425ee2ec48b168979bb7b43f5, type: 3}
       propertyPath: m_Name
       value: SM_Bean_Cowboy_01 (1)
@@ -27029,6 +27973,14 @@ PrefabInstance:
     - target: {fileID: 4283527512771772, guid: e332982425ee2ec48b168979bb7b43f5, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 930047230304930718, guid: e332982425ee2ec48b168979bb7b43f5, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 930047230304930718, guid: e332982425ee2ec48b168979bb7b43f5, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27215,6 +28167,26 @@ PrefabInstance:
     - target: {fileID: 4035765028099436, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: refractureOptions.maxRefractureCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_IsKinematic
@@ -27498,8 +28470,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -27632,6 +28616,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
+    - target: {fileID: -269231443340518640, guid: 9b88eb630e9e15a4f950eae741685374, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -269231443340518640, guid: 9b88eb630e9e15a4f950eae741685374, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4182031405557140, guid: 9b88eb630e9e15a4f950eae741685374, type: 3}
       propertyPath: m_RootOrder
       value: 187
@@ -27663,6 +28655,14 @@ PrefabInstance:
     - target: {fileID: 4182031405557140, guid: 9b88eb630e9e15a4f950eae741685374, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099820142787765843, guid: 9b88eb630e9e15a4f950eae741685374, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099820142787765843, guid: 9b88eb630e9e15a4f950eae741685374, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27717,6 +28717,18 @@ PrefabInstance:
     - target: {fileID: 4812002822647660, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_IsKinematic
@@ -27956,6 +28968,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4962039562683002, guid: bbc12ae2f967ec04e8c3c39eeb92733b, type: 3}
   m_PrefabInstance: {fileID: 1979587699}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1992101933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1992101934}
+  m_Layer: 0
+  m_Name: BulletHoleCollector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1992101934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992101933}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1450417471}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1993673364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28007,6 +29050,22 @@ PrefabInstance:
     - target: {fileID: 4609966831090748, guid: c65338a0f30f41c4681e41312190273d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584973533656276819, guid: c65338a0f30f41c4681e41312190273d, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584973533656276819, guid: c65338a0f30f41c4681e41312190273d, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627384862648715074, guid: c65338a0f30f41c4681e41312190273d, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627384862648715074, guid: c65338a0f30f41c4681e41312190273d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28741,6 +29800,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: fractureOptions.fragmentCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: refractureOptions.maxRefractureCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932081786350429187, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6624662130296042012, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -28836,6 +29915,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
+    - target: {fileID: -8340004913477874796, guid: f10c394033f254647873f3d28a75a062, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8340004913477874796, guid: f10c394033f254647873f3d28a75a062, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3825714923278422392, guid: f10c394033f254647873f3d28a75a062, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3825714923278422392, guid: f10c394033f254647873f3d28a75a062, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
     - target: {fileID: 4058866896921748, guid: f10c394033f254647873f3d28a75a062, type: 3}
       propertyPath: m_RootOrder
       value: 189
@@ -29086,8 +30181,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 157769445}
     m_Modifications:
     - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8406248297568018047, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3050070761289731373, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
       objectReference: {fileID: 0}
     - target: {fileID: 1591165099382186, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_Name
@@ -29532,6 +30639,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 382781f3eb846ba4992cfb4e635c76ed, type: 2}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: shootTimesToDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423912747885685912, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: 'triggerOptions.triggerAllowedTags.Array.data[0]'
+      value: BulletHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8433420583372795013, guid: 37e681eb08549004c9d9c2be529cbf54, type: 3}
       propertyPath: m_IsKinematic
       value: 1

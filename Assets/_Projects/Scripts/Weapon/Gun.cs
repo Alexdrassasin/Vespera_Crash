@@ -105,7 +105,7 @@ public class Gun : StateNode
 
         if (!hit.transform.TryGetComponent(out PlayerHealth playerHealth))
         {
-            EnvironmentHit(hit.point, hit.normal);
+            EnvironmentHit(hit.transform, hit.point, hit.normal);
             return;
         }
 
@@ -123,7 +123,7 @@ public class Gun : StateNode
             return;
         }
 
-        if (!_objectPoolManager.environmentHitEffect)
+        if (!_objectPoolManager.environmentHitEffectPrefab)
         {
             return;
         }
@@ -147,28 +147,55 @@ public class Gun : StateNode
         soundPlayer.PlaySound(playerHitSounds[Random.Range(0, playerHitSounds.Count)],playerHitVolume);*/
     }
 
-    [ObserversRpc(runLocally: true)]
-    private void EnvironmentHit(Vector3 position, Vector3 normal)
+    void WhetherGenerateBulletHole(Transform hitObj, Vector3 position, Vector3 normal)
     {
-        if (!_objectPoolManager.environmentHitEffect)
+        if (hitObj.name.Contains("Fragment"))
+            return;
+
+        if (hitObj.GetComponent<Fracture>())
+        {
+            if (hitObj.GetComponent<Fracture>().isFractured)
+            {
+                return;
+            }
+        }
+
+        var bulletHole = _objectPoolManager.GetBulletHole();
+        bulletHole.transform.position = position + normal * 0.001f;
+        bulletHole.transform.rotation = Quaternion.LookRotation(normal);
+
+        _objectPoolManager.ReturnToPoolAfter<GameObject>(bulletHole, _objectPoolManager.bulletHoleLifeTime, _objectPoolManager.bulletHole_pool);
+    }
+
+    [ObserversRpc(runLocally: true)]
+    private void EnvironmentHit(Transform hitObj, Vector3 position, Vector3 normal)
+    {
+        if (!_objectPoolManager.environmentHitEffectPrefab)
         {
             return;
         }
 
-      
         var impactEffect = _objectPoolManager.GetEnvironmentImpactEffect();
         impactEffect.transform.position = position;
         impactEffect.transform.rotation = Quaternion.LookRotation(normal);
         impactEffect.Play();
 
+        WhetherGenerateBulletHole(hitObj, position, normal);
+                          
         _objectPoolManager.ReturnToPoolAfter<ParticleSystem>(impactEffect, impactEffect.main.duration, _objectPoolManager.environmentImpactEffect_pool);
         //Instantiate(environmentHitEffect, position, Quaternion.LookRotation(normal));
-        if (Physics.Raycast(position - normal * 0.1f, normal, out RaycastHit hit, 0.2f))
+
+        /*if (Physics.Raycast(position - normal * 0.1f, normal, out RaycastHit hit, 0.2f))
         {
             if (hit.rigidbody != null)
             {
                 ApplyImpactForce(hit.rigidbody, position, normal);
             }
+        }*/
+
+        if (hitObj.GetComponent<Rigidbody>())
+        {
+            ApplyImpactForce(hitObj.GetComponent<Rigidbody>(), position, normal);
         }
 
         if (!_objectPoolManager.soundPlayerPrefab)
@@ -184,7 +211,8 @@ public class Gun : StateNode
     }
     private void ApplyImpactForce(Rigidbody rb, Vector3 hitPoint, Vector3 hitNormal)
     {
-        float forceAmount = 500f * damage; // Adjust force power as needed
+        Debug.Log("force applied");
+        float forceAmount = 100f * damage; // Adjust force power as needed
         float impactRadius = 1f; // Radius of the force effect
 
         rb.AddExplosionForce(forceAmount, hitPoint, impactRadius);

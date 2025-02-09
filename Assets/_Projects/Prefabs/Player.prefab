@@ -542,6 +542,7 @@ MonoBehaviour:
   soundPlayerPrefab: {fileID: 5543452219173333447, guid: 3ef500d40810a594dadf242848a595b0, type: 3}
   deathSound: {fileID: 8300000, guid: e7b7fe3641ce482408b6e57d621d2502, type: 3}
   deathAudioVolume: 1
+  isSpectatingThisPlayer: 0
 --- !u!114 &1246764136648152261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1339,7 +1340,7 @@ MonoBehaviour:
   cameraTransform: {fileID: 7613212757347949731}
   hitLayer:
     serializedVersion: 2
-    m_Bits: 183
+    m_Bits: 695
   muzzleFlash: {fileID: 2668945651880170805}
   rightHandTarget: {fileID: 2174287501698540507}
   leftHandTarget: {fileID: 4881937171311549914}
@@ -1348,9 +1349,6 @@ MonoBehaviour:
   renderers:
   - {fileID: 3119440075408074981}
   - {fileID: 3120617819528019445}
-  environmentHitEffect: {fileID: 5370287287859415609, guid: 58b773c0866a1974eb90acec5a3ffe02, type: 3}
-  playerHitEffect: {fileID: 7615540344240206380, guid: 36b99be4ac8b9a04d9a0df051df86700, type: 3}
-  soundPlayerPrefab: {fileID: 5543452219173333447, guid: 3ef500d40810a594dadf242848a595b0, type: 3}
   shootSoundPlayer: {fileID: 8788729235743480517}
   environmentHitVolume: 0.5
   playerHitVolume: 0.5
@@ -2087,7 +2085,7 @@ MonoBehaviour:
   cameraTransform: {fileID: 7613212757347949731}
   hitLayer:
     serializedVersion: 2
-    m_Bits: 183
+    m_Bits: 695
   muzzleFlash: {fileID: 2131273776353781878}
   rightHandTarget: {fileID: 5057151008208703539}
   leftHandTarget: {fileID: 101148130927189700}
@@ -2098,9 +2096,6 @@ MonoBehaviour:
   - {fileID: 7168550731889354428}
   - {fileID: 7168583488901594366}
   - {fileID: 7168758858115116454}
-  environmentHitEffect: {fileID: 5370287287859415609, guid: 58b773c0866a1974eb90acec5a3ffe02, type: 3}
-  playerHitEffect: {fileID: 7615540344240206380, guid: 36b99be4ac8b9a04d9a0df051df86700, type: 3}
-  soundPlayerPrefab: {fileID: 5543452219173333447, guid: 3ef500d40810a594dadf242848a595b0, type: 3}
   shootSoundPlayer: {fileID: 1991380173505596746}
   environmentHitVolume: 0.5
   playerHitVolume: 0.5
