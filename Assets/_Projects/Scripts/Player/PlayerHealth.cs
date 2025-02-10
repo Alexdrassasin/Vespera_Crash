@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerHealth : NetworkBehaviour
 {
+    [Header("Reference")]
+    [SerializeField] private GameObject DraxHair;
+    [SerializeField] private GameObject DraxBody,XynosHair,XynosBody;
+
     [SerializeField] private int maxHealth = 100;
     [SerializeField] SyncVar<int> health = new (0);
     [SerializeField] private int selfLayer, otherLayer;
@@ -21,6 +25,29 @@ public class PlayerHealth : NetworkBehaviour
     {
         base.OnSpawned();
 
+        switch (InstanceHandler.GetInstance<DataCarrier>().selectedCharacter)
+        {
+            case "Drax":
+                DraxHair.gameObject.SetActive(true);
+                DraxBody.gameObject.SetActive(true);
+                XynosBody.gameObject.SetActive(false);
+                XynosHair.gameObject.SetActive(false);
+                maxHealth = 200;
+                transform.GetComponent<PlayerController>().moveSpeed = 5f;
+                transform.GetComponent<PlayerController>().sprintSpeed = 8f;
+                break;
+
+            case "Xynos":
+                DraxHair.gameObject.SetActive(false);
+                DraxBody.gameObject.SetActive(false);
+                XynosBody.gameObject.SetActive(true);
+                XynosHair.gameObject.SetActive(true);
+                maxHealth = 120;
+                transform.GetComponent<PlayerController>().moveSpeed = 8f;
+                transform.GetComponent<PlayerController>().sprintSpeed = 11f;
+                break;
+        }
+       
         var actualLayer = isOwner? selfLayer : otherLayer;
         SetLayerRecursive(gameObject, actualLayer);
 

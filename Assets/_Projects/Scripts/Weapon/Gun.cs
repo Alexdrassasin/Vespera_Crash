@@ -149,7 +149,6 @@ public class Gun : StateNode
 
     void WhetherGenerateBulletHole(Transform hitObj, Vector3 position, Vector3 normal)
     {
-        Debug.Log($"hitObj: {hitObj}");
         if (hitObj.name.Contains("Fragment"))
             return;
 
@@ -171,6 +170,11 @@ public class Gun : StateNode
     [ObserversRpc(runLocally:true)]
     private void EnvironmentHit(Transform hitObj, Vector3 position, Vector3 normal)
     {
+        if (!hitObj)
+        {
+            return;
+        }
+
         if (!_objectPoolManager.environmentHitEffectPrefab)
         {
             return;

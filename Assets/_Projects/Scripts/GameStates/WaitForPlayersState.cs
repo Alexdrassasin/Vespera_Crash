@@ -4,6 +4,7 @@ using PurrNet.StateMachine;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaitForPlayersState : StateNode
 {
@@ -39,6 +40,10 @@ public class WaitForPlayersState : StateNode
 
         if (!asServer)
         {
+            if (waitingText)
+            {
+                animationCoroutine = StartCoroutine(AnimateDots());
+            }
             return;
         }
 
@@ -57,13 +62,20 @@ public class WaitForPlayersState : StateNode
             yield return null;
         }
 
-        StopAnimation();
-
-        _waitingPlayerCanvas.DOFade(0, 0.5f).OnComplete(() =>
+        if (SceneManager.GetActiveScene().name.Contains("MenuSelection"))
         {
-            _waitingPlayerCanvas.gameObject.SetActive(false);
+            StopAnimation();
+
+            _waitingPlayerCanvas.DOFade(0, 0.5f).OnComplete(() =>
+            {
+                _waitingPlayerCanvas.gameObject.SetActive(false);
+                machine.Next();
+            });
+        }
+        else
+        {
             machine.Next();
-        });
+        }       
     }
 
 

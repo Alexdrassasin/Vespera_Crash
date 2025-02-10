@@ -69,13 +69,21 @@ public class ConnectionStarter : MonoBehaviour
         }
         else
         {
-            StartNormal();
+            if (!_networkManager.isServerStarted)
+            {
+                _networkManager.isServerStarted = true;
+                StartNormal();
+            }
         }
 
         BlackOverlay.alpha = 1;
         StartCoroutine(FadeOut(BlackOverlay, 0.5f));
     }
 
+    private void Update()
+    {
+        Debug.Log(_networkManager.isServerStarted);
+    }
     private void StartNormal()
     {
 #if UNITY_EDITOR
@@ -84,8 +92,11 @@ public class ConnectionStarter : MonoBehaviour
         if (!ParrelSync.ClonesManager.IsClone())
         {
             _networkManager.StartServer();
+            Debug.Log("startServer");
         }
+
         _networkManager.StartClient();
+        Debug.Log("startClient");
 #endif
     }
 

@@ -28741,7 +28741,7 @@ MonoBehaviour:
   _directChildren: []
   _networkRules: {fileID: 0}
   _visitiblityRules: {fileID: 0}
-  amountOfRounds: 3
+  amountOfRounds: 1
   spawningState: {fileID: 918416339}
 --- !u!4 &752204538
 Transform:
@@ -30595,6 +30595,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b31d2747d737ea4182399e309d866cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isSetup: 0
+  _prefabId: -2147483648
+  _componentIndex: -2147483648
+  _shouldBePooled: 0
+  _parent: {fileID: 0}
+  _invertedPathToNearestParent: 
+  _directChildren: []
+  _networkRules: {fileID: 0}
+  _visitiblityRules: {fileID: 0}
   HighlightFrame: {fileID: 321305952}
   isCharacter: 0
   isMap: 0
@@ -31151,6 +31160,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c8bb927a358ad44bedba302044f048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isSetup: 0
+  _prefabId: -2147483648
+  _componentIndex: -2147483648
+  _shouldBePooled: 0
+  _parent: {fileID: 0}
+  _invertedPathToNearestParent: 
+  _directChildren: []
+  _networkRules: {fileID: 0}
+  _visitiblityRules: {fileID: 0}
+  clientView: {fileID: 0}
   PanelCharacter: {fileID: 1676834511}
   PanelMap: {fileID: 1057278114}
   PanelWeapon: {fileID: 1258892310}
@@ -51071,7 +51090,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410254324}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -65152,6 +65171,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b31d2747d737ea4182399e309d866cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isSetup: 0
+  _prefabId: -2147483648
+  _componentIndex: -2147483648
+  _shouldBePooled: 0
+  _parent: {fileID: 0}
+  _invertedPathToNearestParent: 
+  _directChildren: []
+  _networkRules: {fileID: 0}
+  _visitiblityRules: {fileID: 0}
   HighlightFrame: {fileID: 1533011023}
   isCharacter: 1
   isMap: 0
@@ -65750,6 +65778,7 @@ MonoBehaviour:
   _directChildren: []
   _networkRules: {fileID: 0}
   _visitiblityRules: {fileID: 0}
+  sceneToChange: MenuSelection
 --- !u!4 &1759520272
 Transform:
   m_ObjectHideFlags: 0
@@ -76342,6 +76371,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b31d2747d737ea4182399e309d866cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isSetup: 0
+  _prefabId: -2147483648
+  _componentIndex: -2147483648
+  _shouldBePooled: 0
+  _parent: {fileID: 0}
+  _invertedPathToNearestParent: 
+  _directChildren: []
+  _networkRules: {fileID: 0}
+  _visitiblityRules: {fileID: 0}
   HighlightFrame: {fileID: 933212346}
   isCharacter: 0
   isMap: 1
@@ -76711,6 +76749,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b31d2747d737ea4182399e309d866cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isSetup: 0
+  _prefabId: -2147483648
+  _componentIndex: -2147483648
+  _shouldBePooled: 0
+  _parent: {fileID: 0}
+  _invertedPathToNearestParent: 
+  _directChildren: []
+  _networkRules: {fileID: 0}
+  _visitiblityRules: {fileID: 0}
   HighlightFrame: {fileID: 1277480706}
   isCharacter: 0
   isMap: 0

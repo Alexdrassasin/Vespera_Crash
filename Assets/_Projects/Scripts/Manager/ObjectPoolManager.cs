@@ -116,11 +116,12 @@ public class ObjectPoolManager : NetworkBehaviour
             return;
         }
 
-        foreach (GameObject child in BulletHoleCollector)
+        foreach (Transform child in BulletHoleCollector)
         {
-            if (child.activeInHierarchy)
+            if (child.gameObject.activeInHierarchy)
             {
-                child.SetActive(false);
+                child.gameObject.SetActive(false);
+                bulletHole_pool.Enqueue(child.gameObject);
             }
         }
     }

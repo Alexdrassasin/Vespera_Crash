@@ -11,8 +11,8 @@ using UnityEngine.Rendering;
 public class PlayerController : NetworkBehaviour 
 { 
     [Header("Movement Settings")]
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float sprintSpeed = 8f;
+    public float moveSpeed = 5f;
+    public float sprintSpeed = 8f;
     [SerializeField] private float jumpForce = 1f;
     [SerializeField] private float gravity = -9.81f;
     [SerializeField] private float groundCheckDistance = 0.2f;

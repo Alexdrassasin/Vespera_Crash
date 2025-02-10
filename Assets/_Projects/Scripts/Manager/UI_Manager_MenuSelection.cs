@@ -1,7 +1,10 @@
+using PurrNet;
 using UnityEngine;
 
-public class UI_Manager_MenuSelection : MonoBehaviour
+public class UI_Manager_MenuSelection : NetworkBehaviour
 {
+    [SerializeField] private GameObject clientView;
+
     [Header("PANELS")]
     [Tooltip("The UI Panel that holds the character window tab")]
     public GameObject PanelCharacter;
@@ -48,6 +51,11 @@ public class UI_Manager_MenuSelection : MonoBehaviour
         DisablePanels();
         PanelMap.SetActive(true);
         lineMap.SetActive(true);
+
+        if (!isServer)
+        {
+            clientView.SetActive(true);
+        }
     }
 
     public void WeaponPanel()
