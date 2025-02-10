@@ -32,6 +32,15 @@ public class WaitForPlayersState : StateNode
     {
         _waitingPlayerCanvas.alpha = 1f;
         _waitingPlayerCanvas.gameObject.SetActive(true);
+        if (SceneManager.GetActiveScene().name.Contains("NoNetWorkManager"))
+        {
+            StopAnimation();
+
+            _waitingPlayerCanvas.DOFade(0, 0.5f).OnComplete(() =>
+            {
+                _waitingPlayerCanvas.gameObject.SetActive(false);
+            });
+        }
     }
 
     public override void Enter(bool asServer)

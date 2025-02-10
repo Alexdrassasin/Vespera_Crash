@@ -19,47 +19,37 @@ public class ConnectionStarter : MonoBehaviour
     private LobbyDataHolder _lobbyDataHolder;
 
     private bool _isFromLobby;
+
     private void Awake()
     {
-        if (!TryGetComponent(out _steamTransport))
+        // Ensure components are correctly assigned
+        _steamTransport = GetComponent<SteamTransport>();
+        _purrTransport = GetComponent<PurrTransport>();
+        _udpTransport = GetComponent<UDPTransport>();
+        _networkManager = GetComponent<NetworkManager>();
+
+        if (_steamTransport == null)
             PurrLogger.LogError($"Failed to get {nameof(SteamTransport)} component.", this);
 
-        if (!TryGetComponent(out _purrTransport))
+        if (_purrTransport == null)
             PurrLogger.LogError($"Failed to get {nameof(PurrTransport)} component.", this);
 
-        if (!TryGetComponent(out _udpTransport))
+        if (_udpTransport == null)
             PurrLogger.LogError($"Failed to get {nameof(UDPTransport)} component.", this);
 
-        if (!TryGetComponent(out _networkManager))
+        if (_networkManager == null)
             PurrLogger.LogError($"Failed to get {nameof(NetworkManager)} component.", this);
 
         _lobbyDataHolder = FindFirstObjectByType<LobbyDataHolder>();
-        if (_lobbyDataHolder)
+        if (_lobbyDataHolder != null)
             _isFromLobby = true;
     }
 
     private void Start()
     {
-        if (!BlackOverlay)
+        if (BlackOverlay == null || _networkManager == null)
         {
-            return;
-        }
-
-        if (!_networkManager)
-        {
-            PurrLogger.LogError($"Failed to start connection. {nameof(NetworkManager)} is null!", this);
-            return;
-        }
-
-        if (!_steamTransport)
-        {
-            PurrLogger.LogError($"Failed to start connection. {nameof(SteamTransport)} is null!", this);
-            return;
-        }
-
-        if (!_purrTransport)
-        {
-            PurrLogger.LogError($"Failed to start connection. {nameof(PurrTransport)} is null!", this);
+            PurrLogger.LogError($"Failed to start connection. {nameof(BlackOverlay)} or {nameof(NetworkManager)} is null!", this);
             return;
         }
 
@@ -72,80 +62,105 @@ public class ConnectionStarter : MonoBehaviour
             StartNormal();
         }
 
-        BlackOverlay.alpha = 1;
-        StartCoroutine(FadeOut(BlackOverlay, 0.5f));
+        if (BlackOverlay != null)
+        {
+            BlackOverlay.alpha = 1;
+            StartCoroutine(FadeOut(BlackOverlay, 0.5f));
+        }
     }
-
 
     private void StartNormal()
     {
 #if UNITY_EDITOR
-        _networkManager.transport = _udpTransport;
-
-        if (!ParrelSync.ClonesManager.IsClone())
+        if (_networkManager != null && _udpTransport != null)
         {
-            _networkManager.StartServer();
-            Debug.Log("startServer");
-        }
+            _networkManager.transport = _udpTransport;
 
-        _networkManager.StartClient();
-        Debug.Log("startClient");
+            if (!ParrelSync.ClonesManager.IsClone())
+            {
+                _networkManager.StartServer();
+                Debug.Log("startServer");
+            }
+
+            _networkManager.StartClient();
+            Debug.Log("startClient");
+        }
+        else
+        {
+            PurrLogger.LogError($"Failed to start connection. {nameof(NetworkManager)} or {nameof(UDPTransport)} is null!", this);
+        }
 #endif
     }
 
     private void StartFromLobby()
     {
-        if (useSteamTransport)
+        if (_networkManager == null || _lobbyDataHolder == null || !_lobbyDataHolder.CurrentLobby.IsValid)
         {
-            _networkManager.transport = _steamTransport;
-        }
-        else
-        {
-            _networkManager.transport = _purrTransport;
-        }
- 
-        if (!_lobbyDataHolder)
-        {
-            PurrLogger.LogError($"Failed to start connection. {nameof(LobbyDataHolder)} is null!", this);
-            return;
-        }
-
-        if (!_lobbyDataHolder.CurrentLobby.IsValid)
-        {
-            PurrLogger.LogError($"Failed to start connection. Lobby is invalid!", this);
+            PurrLogger.LogError($"Failed to start connection. {nameof(NetworkManager)}, {nameof(LobbyDataHolder)}, or Lobby is invalid!", this);
             return;
         }
 
         if (useSteamTransport)
         {
-            if(!ulong.TryParse(_lobbyDataHolder.CurrentLobby.lobbyId,out ulong ulongId))
+            if (_steamTransport != null)
             {
-                Debug.LogError($"Failed to parse lobbyid into ulong!", this);
+                _networkManager.transport = _steamTransport;
+                if (ulong.TryParse(_lobbyDataHolder.CurrentLobby.lobbyId, out ulong ulongId))
+                {
+                    var lobbyOwner = SteamMatchmaking.GetLobbyOwner(new CSteamID(ulongId));
+                    if (lobbyOwner.IsValid())
+                    {
+                        _steamTransport.address = lobbyOwner.ToString();
+                    }
+                    else
+                    {
+                        Debug.LogError($"Failed to get lobby owner from parsed lobby ID", this);
+                        return;
+                    }
+                }
+                else
+                {
+                    Debug.LogError($"Failed to parse lobbyId into ulong!", this);
+                    return;
+                }
+            }
+            else
+            {
+                PurrLogger.LogError($"Failed to start connection. {nameof(SteamTransport)} is null!", this);
                 return;
             }
-
-            var lobbyOwner = SteamMatchmaking.GetLobbyOwner(new CSteamID(ulongId));
-            if (!lobbyOwner.IsValid())
-            {
-                Debug.LogError($"Failed to get lobby owner from parsed lobby ID", this);
-                return;
-            }
-
-            _steamTransport.address = lobbyOwner.ToString();
         }
         else
         {
-            _purrTransport.roomName = _lobbyDataHolder.CurrentLobby.lobbyId;
-        } 
+            if (_purrTransport != null)
+            {
+                _networkManager.transport = _purrTransport;
+                _purrTransport.roomName = _lobbyDataHolder.CurrentLobby.lobbyId;
+            }
+            else
+            {
+                PurrLogger.LogError($"Failed to start connection. {nameof(PurrTransport)} is null!", this);
+                return;
+            }
+        }
 
         if (_lobbyDataHolder.CurrentLobby.IsOwner)
             _networkManager.StartServer();
+
         StartCoroutine(StartClient());
     }
+
     private IEnumerator StartClient()
     {
         yield return new WaitForSeconds(1f);
-        _networkManager.StartClient();
+        if (_networkManager != null)
+        {
+            _networkManager.StartClient();
+        }
+        else
+        {
+            PurrLogger.LogError($"Failed to start client. {nameof(NetworkManager)} is null!", this);
+        }
     }
 
     private IEnumerator FadeOut(CanvasGroup fadeCanvas, float fadeDuration)
@@ -160,3 +175,4 @@ public class ConnectionStarter : MonoBehaviour
         fadeCanvas.alpha = 0; // Ensure fully black
     }
 }
+

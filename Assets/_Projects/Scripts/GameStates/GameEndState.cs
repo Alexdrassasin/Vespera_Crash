@@ -20,6 +20,7 @@ public class GameEndState : StateNode
         }
 
         ShowWinnerOnEveryone();
+        BackToMenu();
     }
 
     [ObserversRpc(runLocally:true)]
@@ -51,8 +52,6 @@ public class GameEndState : StateNode
         Debug.Log($"Game has now ended! {winner} is our champion!");
         endGameView.SetWinner(winner);
         gameViewManager.ShowView<EndGameView>();
-
-        BackToMenu();
     }
 
     public void BackToMenu()
