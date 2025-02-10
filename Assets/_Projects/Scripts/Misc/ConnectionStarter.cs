@@ -69,21 +69,14 @@ public class ConnectionStarter : MonoBehaviour
         }
         else
         {
-            if (!_networkManager.isServerStarted)
-            {
-                _networkManager.isServerStarted = true;
-                StartNormal();
-            }
+            StartNormal();
         }
 
         BlackOverlay.alpha = 1;
         StartCoroutine(FadeOut(BlackOverlay, 0.5f));
     }
 
-    private void Update()
-    {
-        Debug.Log(_networkManager.isServerStarted);
-    }
+
     private void StartNormal()
     {
 #if UNITY_EDITOR
