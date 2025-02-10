@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/PurrLobby/LobbyScenes/LobbySample.unity
-    guid: 163ab76a47bff6646b7627336bc33bdf
+    path: Assets/_Projects/Scenes/LobbySample_Ms.unity
+    guid: 370a68102d38dbb4cba0b4bb0cf3b16f
+  - enabled: 1
+    path: Assets/_Projects/Scenes/MenuSelection.unity
+    guid: ac58470da8e0bfa4c820b69a54d948f6
   - enabled: 1
     path: Assets/_Projects/Scenes/Game_Shooter_FPS.unity
     guid: ca832457162655f4a81e101d0e34fcdf
-  - enabled: 1
-    path: Assets/PurrLobby/LobbyScenes/NetworkedScene.unity
-    guid: e6ba6bbd3072e63449ec09bda4a1b5e6
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
