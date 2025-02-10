@@ -210,12 +210,6 @@ public class Gun : StateNode
         /*var soundPlayer = Instantiate(_objectPoolManager.soundPlayerPrefab, position, Quaternion.identity);
          soundPlayer.PlaySound(environmentHitSounds[Random.Range(0, environmentHitSounds.Count)],environmentHitVolume);*/
     }
-
-    private void EnvironmentHit_Network(Vector3 position, Vector3 normal)
-    { 
-
-    }
-
     private void ApplyImpactForce(Rigidbody rb, Vector3 hitPoint, Vector3 hitNormal)
     {
         Debug.Log("force applied");
