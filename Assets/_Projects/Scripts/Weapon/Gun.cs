@@ -149,6 +149,7 @@ public class Gun : StateNode
 
     void WhetherGenerateBulletHole(Transform hitObj, Vector3 position, Vector3 normal)
     {
+        Debug.Log($"hitObj: {hitObj}");
         if (hitObj.name.Contains("Fragment"))
             return;
 
@@ -167,7 +168,7 @@ public class Gun : StateNode
         _objectPoolManager.ReturnToPoolAfter<GameObject>(bulletHole, _objectPoolManager.bulletHoleLifeTime, _objectPoolManager.bulletHole_pool);
     }
 
-    [ObserversRpc(runLocally: true)]
+    [ObserversRpc(runLocally:true)]
     private void EnvironmentHit(Transform hitObj, Vector3 position, Vector3 normal)
     {
         if (!_objectPoolManager.environmentHitEffectPrefab)
@@ -209,6 +210,12 @@ public class Gun : StateNode
         /*var soundPlayer = Instantiate(_objectPoolManager.soundPlayerPrefab, position, Quaternion.identity);
          soundPlayer.PlaySound(environmentHitSounds[Random.Range(0, environmentHitSounds.Count)],environmentHitVolume);*/
     }
+
+    private void EnvironmentHit_Network(Vector3 position, Vector3 normal)
+    { 
+
+    }
+
     private void ApplyImpactForce(Rigidbody rb, Vector3 hitPoint, Vector3 hitNormal)
     {
         Debug.Log("force applied");

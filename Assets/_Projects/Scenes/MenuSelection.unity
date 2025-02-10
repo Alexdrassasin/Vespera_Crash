@@ -14643,7 +14643,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2108392052}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &907240912
 MonoBehaviour:
@@ -27855,7 +27855,7 @@ MonoBehaviour:
   _directChildren: []
   _networkRules: {fileID: 0}
   _visitiblityRules: {fileID: 0}
-  sceneToChange: Game_Shooter_FPS
+  sceneToChange: Game_Shooter_FPS_Test
   minPlayers: 2
   readyPlayersCount:
     _value: 0
@@ -33461,7 +33461,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 907240911}
   - {fileID: 941519320}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34912,5 +34911,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 351642386607453115}
   - {fileID: 2095564338}
+  - {fileID: 907240911}
   - {fileID: 2108392052}
   - {fileID: 1651204298}
