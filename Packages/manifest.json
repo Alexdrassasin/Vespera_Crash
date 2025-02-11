@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.dgreenheck.openfracture": "https://github.com/dgreenheck/OpenFracture.git",
+    "com.qiaozhilei.easy-text-effects": "https://github.com/LeiQiaoZhi/Easy-Text-Effects-for-Unity.git",
     "com.rlabrecque.steamworks.net": "https://github.com/rlabrecque/Steamworks.NET.git?path=/com.rlabrecque.steamworks.net#2024.8.0",
     "com.unity.addressables": "2.2.2",
     "com.unity.animation.rigging": "1.3.0",
