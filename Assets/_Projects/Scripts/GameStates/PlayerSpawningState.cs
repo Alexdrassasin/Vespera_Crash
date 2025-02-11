@@ -16,12 +16,11 @@ public class PlayerSpawningState : StateNode
 
         if (!asServer)
         {
-           
             return;
         }
 
         DespawnPlayers();
-
+        InstanceHandler.GetInstance<TerrainManager>().InitializeTerrain();
         StartCoroutine(WaitForTerrainSpawn());
     }
 
@@ -43,8 +42,8 @@ public class PlayerSpawningState : StateNode
     private List<PlayerHealth> SpawnPlayers()
     {
         var spawnedPlayers = new List<PlayerHealth>();
-        //spawnPoints.Clear();
-        //spawnPoints = InstanceHandler.GetInstance<TerrainManager>().RetriveSpawnPoint();
+        spawnPoints.Clear();
+        spawnPoints = InstanceHandler.GetInstance<TerrainManager>().RetriveSpawnPoint();
         // Shuffle the spawn points to randomize the spawning sequence
         Shuffle(spawnPoints);
 

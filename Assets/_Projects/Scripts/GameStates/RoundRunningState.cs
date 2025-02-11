@@ -9,11 +9,16 @@ using UnityEngine;
 public class RoundRunningState :  StateNode<List<PlayerHealth>>
 {
     private List<PlayerID> _players = new();
+    [SerializeField] private RoundEndState _endState;
 
     [ObserversRpc]
     private void InitializeUI()
     {
         Debug.Log("UI Initialization Done");
+        if(_endState._roundCount < InstanceHandler.GetInstance<DataCarrier>().maxRound)
+        {
+            InstanceHandler.GetInstance<MainGameView>().UpdateRoundText(_endState._roundCount + 1);
+        }
 
         InstanceHandler.GetInstance<MainGameView>().toggleSpectatingPlayerName(false);
         if (InstanceHandler.GetInstance<WaitForPlayersState>()._waitingPlayerCanvas.alpha != 0)
@@ -34,6 +39,7 @@ public class RoundRunningState :  StateNode<List<PlayerHealth>>
 
         if (!asServer)
         {
+            InstanceHandler.GetInstance<TerrainManager>().InitializeTerrain();
             return;
         }
 

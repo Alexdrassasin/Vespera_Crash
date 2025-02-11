@@ -795,8 +795,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4019655710100003339}
   - component: {fileID: 3790402166897278138}
-  - component: {fileID: 8014739686799883234}
-  - component: {fileID: -521156658234469444}
   m_Layer: 0
   m_Name: IndustrialTerrain_Map1
   m_TagString: Untagged
@@ -954,60 +952,6 @@ MonoBehaviour:
   - {fileID: 5118350268423225602}
   - {fileID: 8567423876464783468}
   - {fileID: 3166305882914847738}
---- !u!114 &8014739686799883234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7101071516565685549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 817fe5016bd0a2a49a95b6eb338bb132, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _isSetup: 0
-  _prefabId: -2147483648
-  _componentIndex: -2147483648
-  _shouldBePooled: 0
-  _parent: {fileID: 0}
-  _invertedPathToNearestParent: 
-  _directChildren: []
-  _networkRules: {fileID: 0}
-  _visitiblityRules: {fileID: 0}
-  _syncPosition: 1
-  _syncRotation: 1
-  _syncScale: 0
-  _syncParent: 0
-  _interpolateSettings: 7
-  _ownerAuth: 1
-  _sendIntervalInTicks: 0
-  _characterControllerPatch: 0
-  _tolerances:
-    positionTolerance: 0.1
-    rotationAngleTolerance: 1
-    scaleTolerance: 0.05
---- !u!114 &-521156658234469444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7101071516565685549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d589309a8b0b45f44a0ddd1e2e82017a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _isSetup: 0
-  _prefabId: -2147483648
-  _componentIndex: -2147483648
-  _shouldBePooled: 0
-  _parent: {fileID: 0}
-  _invertedPathToNearestParent: 
-  _directChildren: []
-  _networkRules: {fileID: 0}
-  _visitiblityRules: {fileID: 0}
 --- !u!1001 &11721151491478136
 PrefabInstance:
   m_ObjectHideFlags: 0

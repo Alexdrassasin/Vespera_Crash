@@ -20,3 +20,48 @@ MonoBehaviour:
   - prefab: {fileID: 4594219703330576054, guid: d33c0d6dda6858546969cf50e7fd9daa, type: 3}
     pooled: 0
     warmupCount: 5
+  - prefab: {fileID: 1000012407837468, guid: 9732a241b7bd0fa4a8e59553d6d8a2b0, type: 3}
+    pooled: 0
+    warmupCount: 5
+  - prefab: {fileID: 1000012364095318, guid: a62abbb708e3f49489bde29e5cfc3ebd, type: 3}
+    pooled: 0
+    warmupCount: 5
+  - prefab: {fileID: 1000010192389154, guid: 39485138b2c1f4d41bdd3846e259ffea, type: 3}
+    pooled: 0
+    warmupCount: 5
+  - prefab: {fileID: 1000012270689622, guid: ef77372ba45b400439d547071a884266, type: 3}
+    pooled: 0
+    warmupCount: 5
+  - prefab: {fileID: 1000011585897626, guid: 9d1bb44d500a3ad489d3cb3a6900199f, type: 3}
+    pooled: 0
+    warmupCount: 5
+  - prefab: {fileID: 1000010811274378, guid: 6857ff1d3761e21479727f3b27cc8f68, type: 3}
+    pooled: 0
+    warmupCount: 5
+  - prefab: {fileID: 1000013580012832, guid: a50af88759b02d74b8328377b33ab3e8, type: 3}
+    pooled: 0
+    warmupCount: 5
+  - prefab: {fileID: 1000010619805496, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
+    pooled: 0
+    warmupCount: 5
+  - prefab: {fileID: 1000013871382564, guid: fe9a19d4f0d796c40bf4fc6b69dd7b81, type: 3}
+    pooled: 0
+    warmupCount: 5
+  - prefab: {fileID: 1000010467075504, guid: 4944c29dadd7e02468c053eafe48e485, type: 3}
+    pooled: 0
+    warmupCount: 5
+  - prefab: {fileID: 1000013628716364, guid: ee5ce8c8eaa133d43a291b519c442236, type: 3}
+    pooled: 0
+    warmupCount: 5
+  - prefab: {fileID: 1000012744991898, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
+    pooled: 0
+    warmupCount: 5
+  - prefab: {fileID: 7101071516565685549, guid: 87f52699fa9e06a4886e87e0fcdfd657, type: 3}
+    pooled: 0
+    warmupCount: 5
+  - prefab: {fileID: 8432223617476534708, guid: 09f07ddb69d56654ca6f202c281df3bf, type: 3}
+    pooled: 0
+    warmupCount: 5
+  - prefab: {fileID: 7790998923366006764, guid: 8c346634afa43e1469839f2102588412, type: 3}
+    pooled: 0
+    warmupCount: 5

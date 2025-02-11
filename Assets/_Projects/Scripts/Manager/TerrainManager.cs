@@ -7,7 +7,6 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-using static UnityEngine.Rendering.VirtualTexturing.Debugging;
 
 public class TerrainManager : NetworkBehaviour
 {
@@ -15,7 +14,7 @@ public class TerrainManager : NetworkBehaviour
     public class TerrainData
     {
         public string name;
-        public AssetReferenceGameObject terrainModel;
+       // public AssetReferenceGameObject terrainModel;
         public Material skyboxMaterial;
         public GameObject SpawnPointSet;
         public GameObject Prefab;
@@ -39,7 +38,13 @@ public class TerrainManager : NetworkBehaviour
         //StartCoroutine(InitializeTerrain());
     
     }
-    private IEnumerator InitializeTerrain()
+
+    public void InitializeTerrain()
+    {
+        Debug.Log("initialize terrain");
+        StartCoroutine(InitializeTerrainCoroutine());
+    }
+    private IEnumerator InitializeTerrainCoroutine()
     {
         while (!InstanceHandler.GetInstance<DataCarrier>())
         {
@@ -73,7 +78,7 @@ public class TerrainManager : NetworkBehaviour
         AssetReferenceGameObject targetReference;
 
         currentTerrainData = GetTerrainDataByName(name);
-        currentTerrainData.terrainModel.LoadAssetAsync().Completed += OnAddressableLoaded;
+       // currentTerrainData.terrainModel.LoadAssetAsync().Completed += OnAddressableLoaded;
         RenderSettings.skybox = currentTerrainData.skyboxMaterial;
         currentTerrainData.SpawnPointSet.SetActive(true);
     }
@@ -81,7 +86,9 @@ public class TerrainManager : NetworkBehaviour
     public void SpawnTerrain_noAddressable(string name)
     {
         currentTerrainData = GetTerrainDataByName(name);
-        var terrainModel = Instantiate(currentTerrainData.Prefab);
+        //var terrainModel = Instantiate(currentTerrainData.Prefab);
+        var terrainModel = currentTerrainData.Prefab;
+        terrainModel.SetActive(true);
         InstanceHandler.GetInstance<ObjectPoolManager>().destructibleObjects = terrainModel.GetComponent<TerrainController>().destructibleObjects;
         isTerrainDoneSpawned = true;
         RenderSettings.skybox = currentTerrainData.skyboxMaterial;

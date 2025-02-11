@@ -1,4 +1,5 @@
 using PurrNet;
+using System.Collections;
 using UnityEngine;
 
 public class UI_Manager_MenuSelection : NetworkBehaviour
@@ -38,7 +39,35 @@ public class UI_Manager_MenuSelection : NetworkBehaviour
     private void Start()
     {
         CharacterPanel();
+        StartCoroutine(ForceResetDataCarrier());
     }
+
+    IEnumerator ForceResetDataCarrier()
+    {
+        DataCarrier dataCarrier;
+        while (!InstanceHandler.GetInstance<DataCarrier>())
+        {
+            yield return null;
+        }
+
+        dataCarrier = InstanceHandler.GetInstance<DataCarrier>();
+        dataCarrier.selectedMap = "Playground";
+        dataCarrier.maxRound = 3;
+
+        while (!networkManager)
+        {
+            yield return null;
+        }
+
+        foreach (PlayerID player in networkManager.players)
+        {
+            if (dataCarrier.selectedCharacter.ContainsKey(player))
+            {
+                dataCarrier.selectedCharacter.Add(player, "Drax");
+            }
+        }   
+    }
+
     public void CharacterPanel()
     {
         DisablePanels();

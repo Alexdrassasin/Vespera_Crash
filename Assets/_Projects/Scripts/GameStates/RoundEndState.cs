@@ -8,7 +8,7 @@ public class RoundEndState : StateNode
     [SerializeField] private int amountOfRounds = 3;
     [SerializeField] private StateNode spawningState;
 
-    private int _roundCount = 0;
+    public int _roundCount = 0;
     private WaitForSeconds _delay = new(3);
 
     public override void Enter(bool asServer)
@@ -30,7 +30,7 @@ public class RoundEndState : StateNode
     {
         _roundCount++;
 
-        if (_roundCount >= amountOfRounds)
+        if (_roundCount >= InstanceHandler.GetInstance<DataCarrier>().maxRound)
         {
             machine.Next();
             return;

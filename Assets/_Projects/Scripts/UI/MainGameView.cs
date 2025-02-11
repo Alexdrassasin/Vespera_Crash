@@ -10,7 +10,7 @@ public class MainGameView : View
     [SerializeField] private TMP_Text healthText, spectatingPlayerName;
     [SerializeField] private CanvasGroup spectatingPlayerNameParent;
     [SerializeField] private Slider healthBarSlider, easeHealthBarSlider;
-
+    [SerializeField] private TextMeshProUGUI RoundText;
     private void Awake()
     {
         InstanceHandler.RegisterInstance(this);
@@ -29,6 +29,11 @@ public class MainGameView : View
     public override void OnShow()
     {
 
+    }
+
+    public void UpdateRoundText(int currentRound)
+    {
+        RoundText.text = $"ROUND {currentRound}/{InstanceHandler.GetInstance<DataCarrier>().maxRound}";
     }
 
     public void UpdateHealthBarInstant(int currentHealth, int maxHealth)

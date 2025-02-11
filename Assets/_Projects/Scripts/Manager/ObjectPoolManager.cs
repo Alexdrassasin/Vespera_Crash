@@ -51,7 +51,6 @@ public class ObjectPoolManager : NetworkBehaviour
 
     public void ResetFracture()
     {
-        Debug.Log(destructibleObjects.Count);
         if(destructibleObjects.Count == 0)
         {
             return;

@@ -6,10 +6,13 @@ public class DataCarrier : NetworkBehaviour
 {
     public string selectedMap;
     [SerializeField] public SyncDictionary<PlayerID, string> selectedCharacter = new(true);
+    public int maxRound;
+
 
     private void Awake()
     {      
         selectedMap = "Playground";
+        maxRound = 3;
         InstanceHandler.RegisterInstance(this);
         DontDestroyOnLoad(gameObject);     
     }
