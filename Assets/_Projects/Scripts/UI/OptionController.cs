@@ -1,4 +1,5 @@
 using PurrNet;
+using PurrNet.Modules;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,8 +36,32 @@ public class OptionController : NetworkBehaviour
         HighlightFrame.SetActive(true);
         currentHightLightFrame_Character = HighlightFrame;
         currentHightLightFrame_Character.transform.parent.GetComponent<CanvasGroup>().alpha = 1f;
-        InstanceHandler.GetInstance<DataCarrier>().selectedCharacter = transform.name.Contains("Male") ? "Drax" : "Xynos";
+        //InstanceHandler.GetInstance<DataCarrier>().selectedCharacter = transform.name.Contains("Male") ? "Drax" : "Xynos";
+        var dataCarrier = InstanceHandler.GetInstance<DataCarrier>();
+
+        if (dataCarrier == null)
+        {
+            Debug.LogError("DataCarrier instance is null.");
+            return;
+        }
+
+        if (networkManager == null)
+        {
+            Debug.LogError("NetworkManager instance is null.");
+            return;
+        }
+
+        var localPlayer = networkManager.localPlayer;
+        if (localPlayer == null)
+        {
+            Debug.LogError("Local player ID is null.");
+            return;
+        }
+
+        dataCarrier.CheckForDictionaryEntry(localPlayer);
+        dataCarrier.selectedCharacter[localPlayer] = transform.name.Contains("Male") ? "Drax" : "Xynos";
     }
+
 
     [ObserversRpc(runLocally:true)]
     public void SelectMap()

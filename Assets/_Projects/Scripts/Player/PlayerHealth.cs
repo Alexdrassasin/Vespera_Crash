@@ -25,7 +25,10 @@ public class PlayerHealth : NetworkBehaviour
     {
         base.OnSpawned();
 
-        switch (InstanceHandler.GetInstance<DataCarrier>().selectedCharacter)
+        //setup default character
+        InstanceHandler.GetInstance<DataCarrier>().CheckForDictionaryEntry(owner.Value);
+
+        switch (InstanceHandler.GetInstance<DataCarrier>().selectedCharacter[owner.Value])
         {
             case "Drax":
                 DraxHair.gameObject.SetActive(true);
