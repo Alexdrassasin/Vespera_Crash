@@ -45,7 +45,7 @@ public class PlayerHealth : NetworkBehaviour
                 DraxBody.gameObject.SetActive(false);
                 XynosBody.gameObject.SetActive(true);
                 XynosHair.gameObject.SetActive(true);
-                maxHealth = 120;
+                maxHealth = 150;
                 transform.GetComponent<PlayerController>().moveSpeed = 8f;
                 transform.GetComponent<PlayerController>().sprintSpeed = 11f;
                 break;
