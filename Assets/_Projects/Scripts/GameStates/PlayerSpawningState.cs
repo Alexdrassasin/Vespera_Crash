@@ -30,8 +30,8 @@ public class PlayerSpawningState : StateNode
         {
             yield return null;
         }
-        InstanceHandler.GetInstance<ObjectPoolManager>().ResetFracture();
-        InstanceHandler.GetInstance<ObjectPoolManager>().TurnAllBulletHolesOff();
+        //InstanceHandler.GetInstance<ObjectPoolManager>().ResetFracture();
+        //InstanceHandler.GetInstance<ObjectPoolManager>().TurnAllBulletHolesOff();
         Debug.Log("SpawnPlayers");
 
         var spawnedPlayers = SpawnPlayers();

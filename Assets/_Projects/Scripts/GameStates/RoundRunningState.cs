@@ -17,6 +17,8 @@ public class RoundRunningState :  StateNode<List<PlayerHealth>>
         Debug.Log("UI Initialization Done");
 
         InstanceHandler.GetInstance<MainGameView>().toggleSpectatingPlayerName(false);
+        InstanceHandler.GetInstance<ObjectPoolManager>().ResetFracture();
+        InstanceHandler.GetInstance<ObjectPoolManager>().TurnAllBulletHolesOff();
         if (InstanceHandler.GetInstance<WaitForPlayersState>()._waitingPlayerCanvas.alpha != 0)
         {
             InstanceHandler.GetInstance<WaitForPlayersState>()._waitingPlayerCanvas.DOFade(0, 0.5f).OnComplete(() =>

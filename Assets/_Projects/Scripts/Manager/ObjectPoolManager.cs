@@ -65,6 +65,7 @@ public class ObjectPoolManager : NetworkBehaviour
 
             obj.bulletHoleCollector.Clear();
             obj.gameObject.SetActive(true);
+            obj.transform.GetComponent<Fracture>().isFractured = false;
         }
     }
 

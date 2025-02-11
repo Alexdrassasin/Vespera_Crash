@@ -2,6 +2,7 @@ using DG.Tweening;
 using PurrNet;
 using PurrNet.Modules;
 using PurrNet.StateMachine;
+using Steamworks;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -53,7 +54,7 @@ public class MenuSceneState : StateNode
         ReadyText.text = "READY";
 
         foreach (var player in networkManager.players)
-        {
+        {           
             var playerStatus = Instantiate(readyUIPrefab, layoutParent);
             playerStatus.UpdateStatus(player.ToString(), false);
             playerTagDict[player] = playerStatus;

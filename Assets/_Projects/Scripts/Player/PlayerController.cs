@@ -65,13 +65,13 @@ public class PlayerController : NetworkBehaviour
 
     private void Update()
     {
-#if UNITY_EDITOR
+//#if UNITY_EDITOR
         if (Cursor.lockState != CursorLockMode.Locked || Cursor.visible != false)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
-#endif
+//#endif
         HandleWeaponSwitching();
         HandleMovement();
         HandleRotation();

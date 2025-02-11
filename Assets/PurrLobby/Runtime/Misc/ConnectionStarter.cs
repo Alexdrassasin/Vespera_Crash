@@ -63,5 +63,6 @@ namespace PurrLobby
             yield return new WaitForSeconds(1f);
             _networkManager.StartClient();
         }
+     
     }
 }
