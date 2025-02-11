@@ -79,6 +79,10 @@ public class PlayerHealth : NetworkBehaviour
     {
         InstanceHandler.GetInstance<MainGameView>().UpdateHealth(newHealth,maxHealth);
         InstanceHandler.GetInstance<MainGameView>().UpdateHealthBarSmooth(newHealth, maxHealth);
+        if(newHealth != maxHealth)
+        {
+            InstanceHandler.GetInstance<ScoreManager>().GetComponent<TakeDamageEffect>().ScreenDamageEffect(1, new Vector3(0, -0.2f, -0.5f));
+        }      
     }
 
     private void OnHealthChanged_NotPlayer(int newHealth)
@@ -89,6 +93,10 @@ public class PlayerHealth : NetworkBehaviour
         }
         InstanceHandler.GetInstance<MainGameView>().UpdateHealth(newHealth, maxHealth);
         InstanceHandler.GetInstance<MainGameView>().UpdateHealthBarSmooth(newHealth, maxHealth);
+        if (newHealth != maxHealth)
+        {
+            InstanceHandler.GetInstance<ScoreManager>().GetComponent<TakeDamageEffect>().ScreenDamageEffect(1, new Vector3(0, -0.2f, -0.5f));
+        }
     }
 
     private void SetLayerRecursive(GameObject obj, int layer) 

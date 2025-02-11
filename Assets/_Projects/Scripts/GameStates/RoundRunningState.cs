@@ -15,10 +15,6 @@ public class RoundRunningState :  StateNode<List<PlayerHealth>>
     private void InitializeUI()
     {
         Debug.Log("UI Initialization Done");
-        if(_endState._roundCount < InstanceHandler.GetInstance<DataCarrier>().maxRound)
-        {
-            InstanceHandler.GetInstance<MainGameView>().UpdateRoundText(_endState._roundCount + 1);
-        }
 
         InstanceHandler.GetInstance<MainGameView>().toggleSpectatingPlayerName(false);
         if (InstanceHandler.GetInstance<WaitForPlayersState>()._waitingPlayerCanvas.alpha != 0)
@@ -26,7 +22,18 @@ public class RoundRunningState :  StateNode<List<PlayerHealth>>
             InstanceHandler.GetInstance<WaitForPlayersState>()._waitingPlayerCanvas.DOFade(0, 0.5f).OnComplete(() =>
             {
                 InstanceHandler.GetInstance<WaitForPlayersState>()._waitingPlayerCanvas.gameObject.SetActive(false);
+                InstanceHandler.GetInstance<MainGameView>().canvasGroup.alpha = 1f;
             });
+        }
+      
+    }
+
+    [ObserversRpc]
+    private void UpdateRoundUIToClients(int round)
+    {
+        if (_endState._roundCount < InstanceHandler.GetInstance<DataCarrier>().maxRound)
+        {
+            InstanceHandler.GetInstance<MainGameView>().UpdateRoundText(round);
         }
     }
 
@@ -43,6 +50,8 @@ public class RoundRunningState :  StateNode<List<PlayerHealth>>
             return;
         }
 
+        UpdateRoundUIToClients(_endState._roundCount + 1);
+      
         _players.Clear();
         foreach (var player in data)
         {

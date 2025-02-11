@@ -42,6 +42,7 @@ public class UI_Manager_MenuSelection : NetworkBehaviour
         StartCoroutine(ForceResetDataCarrier());
     }
 
+    
     IEnumerator ForceResetDataCarrier()
     {
         DataCarrier dataCarrier;
@@ -59,14 +60,18 @@ public class UI_Manager_MenuSelection : NetworkBehaviour
             yield return null;
         }
 
-        foreach (PlayerID player in networkManager.players)
+        if (dataCarrier.selectedCharacter.ContainsKey(networkManager.localPlayer))
         {
-            if (dataCarrier.selectedCharacter.ContainsKey(player))
-            {
-                dataCarrier.selectedCharacter.Add(player, "Drax");
-            }
-        }   
+            UpdateSyncDictToServer(networkManager.localPlayer);
+        }
     }
+
+    [ServerRpc(requireOwnership: false)]
+    public void UpdateSyncDictToServer(PlayerID playerID)
+    {
+        InstanceHandler.GetInstance<DataCarrier>().selectedCharacter[playerID] = "Drax";
+    }
+
 
     public void CharacterPanel()
     {
