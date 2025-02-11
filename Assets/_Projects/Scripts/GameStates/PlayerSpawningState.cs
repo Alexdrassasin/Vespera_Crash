@@ -1,6 +1,7 @@
 using DG.Tweening;
 using PurrNet;
 using PurrNet.StateMachine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,21 +22,29 @@ public class PlayerSpawningState : StateNode
 
         DespawnPlayers();
 
+        StartCoroutine(WaitForTerrainSpawn());
+    }
+
+   private IEnumerator WaitForTerrainSpawn()
+    {
+        while (!InstanceHandler.GetInstance<TerrainManager>().isTerrainDoneSpawned)
+        {
+            yield return null;
+        }
         InstanceHandler.GetInstance<ObjectPoolManager>().ResetFracture();
         InstanceHandler.GetInstance<ObjectPoolManager>().TurnAllBulletHolesOff();
-        Debug.Log("SpawnPlayers");     
+        Debug.Log("SpawnPlayers");
 
         var spawnedPlayers = SpawnPlayers();
 
         machine.Next(spawnedPlayers);
     }
 
-   
-
     private List<PlayerHealth> SpawnPlayers()
     {
         var spawnedPlayers = new List<PlayerHealth>();
-
+        //spawnPoints.Clear();
+        //spawnPoints = InstanceHandler.GetInstance<TerrainManager>().RetriveSpawnPoint();
         // Shuffle the spawn points to randomize the spawning sequence
         Shuffle(spawnPoints);
 

@@ -15,7 +15,8 @@ EditorBuildSettings:
     path: Assets/_Projects/Scenes/Game_Shooter_FPS_Test.unity
     guid: 2d6caeb55d36a6845b528fd35a4681be
   - enabled: 1
-    path: Assets/_Projects/Scenes/MenuSelection_NoNetWorkManager.unity
-    guid: 837af8b88d1d3614083f497686341f0c
-  m_configObjects: {}
+    path: Assets/_Projects/Scenes/MenuSelection_NoNetwork.unity
+    guid: e9c56372505218e419431a0f166e4f32
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: ed51d6bad68c1e44093927fbbf8511fe, type: 2}
   m_UseUCBPForAssetBundles: 0

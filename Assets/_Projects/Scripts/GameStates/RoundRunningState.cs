@@ -31,6 +31,7 @@ public class RoundRunningState :  StateNode<List<PlayerHealth>>
 
         InitializeUI();
 
+
         if (!asServer)
         {
             return;

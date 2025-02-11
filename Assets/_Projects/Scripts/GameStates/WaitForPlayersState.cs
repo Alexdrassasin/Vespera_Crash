@@ -17,6 +17,7 @@ public class WaitForPlayersState : StateNode
     private int dotCount = 0;
 
     private Coroutine animationCoroutine;
+    private TerrainManager _terrainManager;
 
     private void Awake()
     {
@@ -32,7 +33,8 @@ public class WaitForPlayersState : StateNode
     {
         _waitingPlayerCanvas.alpha = 1f;
         _waitingPlayerCanvas.gameObject.SetActive(true);
-        if (SceneManager.GetActiveScene().name.Contains("NoNetWork"))
+
+        if (SceneManager.GetActiveScene().name.Contains("NoNetwork"))
         {
             StopAnimation();
 
@@ -121,4 +123,6 @@ public class WaitForPlayersState : StateNode
             waitingText.text = baseText; // Reset to the base text
         }
     }
+
+   
 }

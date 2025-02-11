@@ -1,5 +1,4 @@
 using DG.Tweening;
-using Octokit;
 using PurrNet;
 using PurrNet.Modules;
 using PurrNet.StateMachine;
@@ -74,7 +73,7 @@ public class MenuSceneState : StateNode
         isReady = !isReady;
         if (isReady)
         {
-            Ready();
+            Ready(networkManager.localPlayer);
             GreenBg.SetActive(true);
             ReadyText.text = "CANCEL";
         }
@@ -87,12 +86,12 @@ public class MenuSceneState : StateNode
     }
 
     [ServerRpc(requireOwnership: false)]
-    public void Ready(RPCInfo info = default)
+    public void Ready(PlayerID playerID, RPCInfo info = default)
     {
         readyPlayersCount.value++;
         SetStatus(info.sender, true);
         UpdateAllPlayerTags();
-        InstanceHandler.GetInstance<DataCarrier>().CheckForDictionaryEntry(networkManager.localPlayer);
+        InstanceHandler.GetInstance<DataCarrier>().CheckForDictionaryEntry(playerID);
         CheckCanStartGame();
     }
 
