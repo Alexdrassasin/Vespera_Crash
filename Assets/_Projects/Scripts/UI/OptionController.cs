@@ -59,7 +59,13 @@ public class OptionController : NetworkBehaviour
         }
 
         dataCarrier.CheckForDictionaryEntry(localPlayer);
-        dataCarrier.selectedCharacter[localPlayer] = transform.name.Contains("Male") ? "Drax" : "Xynos";
+        UpdateSyncDictToServer(networkManager.localPlayer);
+    }
+
+    [ServerRpc(requireOwnership: false)]
+    public void UpdateSyncDictToServer(PlayerID playerID)
+    {
+        InstanceHandler.GetInstance<DataCarrier>().selectedCharacter[playerID] = transform.name.Contains("Male") ? "Drax" : "Xynos";
     }
 
 

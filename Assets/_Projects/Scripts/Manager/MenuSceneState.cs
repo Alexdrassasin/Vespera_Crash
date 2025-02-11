@@ -23,7 +23,7 @@ public class MenuSceneState : StateNode
 
     [SerializeField] private PlayerStatusController readyUIPrefab; // Assign your UI prefab in the Inspector
     [SerializeField] private Transform layoutParent;
-    [SerializeField] private GameObject GreenBg,waitingPlayer;
+    [SerializeField] private GameObject GreenBg;
     [SerializeField] private TextMeshProUGUI ReadyText;
 
     private bool isReady;
@@ -92,6 +92,7 @@ public class MenuSceneState : StateNode
         readyPlayersCount.value++;
         SetStatus(info.sender, true);
         UpdateAllPlayerTags();
+        InstanceHandler.GetInstance<DataCarrier>().CheckForDictionaryEntry(networkManager.localPlayer);
         CheckCanStartGame();
     }
 

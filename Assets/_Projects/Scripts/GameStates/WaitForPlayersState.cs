@@ -32,7 +32,7 @@ public class WaitForPlayersState : StateNode
     {
         _waitingPlayerCanvas.alpha = 1f;
         _waitingPlayerCanvas.gameObject.SetActive(true);
-        if (SceneManager.GetActiveScene().name.Contains("NoNetWorkManager"))
+        if (SceneManager.GetActiveScene().name.Contains("NoNetWork"))
         {
             StopAnimation();
 
